@@ -1,0 +1,43 @@
+type: "MARKDOWN_NOTE"
+folder: "25e447a4d8a6df4b48b4"
+title: "python note"
+content: '''
+  # python note
+  
+  ## Features compare to static programming language
+  - Two basic types: String and Numbers.
+  - No declaration or data type definition is needed for variables.
+  - python do not have `switch` statement, use `if ... elif ... else` instead.
+  - `while` statement and `for` statement can have an optional `else` clause.
+  - if you `break` out of a `for` or `while` loop, any corresponding loop `else` block is **not** execute.
+  
+  
+  ## 3. Functions
+  - when we declare a starred parameter such as `*param`, then all the positional arguments from that point till the end are collected as a **tuple** called *param*.
+  - when we declare a double-starred parameter such as `**param`, then all the keyword arguments from that point till the end are collected as a **dictionary** called *param*.
+  - `return` statement without a value is equivalent to `return None` statement.
+  - Every function implicitly contains a `return None` statement at the end unless you have written your own `return` statement.
+  - The `pass` statement is used in Python to indicate an empty block of statements.
+  - A string on the first logical line of a function is the *docstring* for that function. Same to **modules** and **classes**.
+  
+  ## 4. Modules
+  - Run `import os; print(os.getcwd())` to find out the current directory of your program.
+  - `sys.path` which is same as the `PYTHONPATH` environment variable. The first string in `sys.path` is empty - this empty string indicates that the current directory is also part of `sys.path`.
+  - `.pyc` these byte-compiled files are platform-independent.
+  - If Python does not have permission to write to files in that directory, then `.pyc` files will *not* be created.
+  - In general, *avoid* using the `from...import` statement, use `import` instead. In order to avoid name clashes and will be more readable.
+  - Every Python modules has its `__name__` defined. If this is `__main__`, that implies that the module is being run standlone by the user.
+  - Built-in `dir()` fuction return list of names defined by an *object*. (try `vars()` out)
+  - `del` statement is used to *delete* a variable/name. And delete object will not in `dir()` result.
+  - Packages are just folders of modules with a special `__init__.py` file.
+  - Packages hold modules, modules hold fuctions and clazz, fuctions hold variable.
+  
+  ## 5. Data Structures - 4 built-in DS - *list, tuple, dictionary and set*
+  - list is a mutable data type.
+  - tuples are immutable data type like strings.
+  - `empty = ()` and `single = (2, )` for 0 or 1 items tuple.
+'''
+tags: []
+isStarred: true
+createdAt: "2017-05-19T21:52:01.308Z"
+updatedAt: "2017-05-25T05:03:19.108Z"
