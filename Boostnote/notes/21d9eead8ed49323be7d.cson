@@ -36,8 +36,9 @@ content: '''
   - list is a mutable data type.
   - tuples are immutable data type like strings.
   - `empty = ()` and `single = (2, )` for 0 or 1 items tuple.
+  - 
 '''
 tags: []
 isStarred: true
 createdAt: "2017-05-19T21:52:01.308Z"
-updatedAt: "2017-05-25T05:03:19.108Z"
+updatedAt: "2017-05-25T21:39:13.401Z"

@@ -1,0 +1,12 @@
+type: "MARKDOWN_NOTE"
+folder: "a4fb54a45d03e5216c46"
+title: "POJO"
+content: '''
+  # POJO
+  
+  POJO means **Plain Old Java Object**. It refers to a Java object(instance of definition) that isn't bogged down by framework extensions.
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-25T21:44:27.779Z"
+updatedAt: "2017-05-25T21:50:15.214Z"
