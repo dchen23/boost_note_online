@@ -36,9 +36,16 @@ content: '''
   - list is a mutable data type.
   - tuples are immutable data type like strings.
   - `empty = ()` and `single = (2, )` for 0 or 1 items tuple.
-  - 
+  - you can use only immutable objects (like strings) for the keys of a dictionary but you can use either immutable or mutable objects for the values of the dictionary.
+  - dictionary is a mutable data type.
+  - Lists, tuples and strings are examples of *sequences*.
+  - The major features of sequences are *membership tests* (i.e. the `in` and `not in` expressions), *indexing operations* (i.e. `a[2][2]`) and *slicing operation* (i.e. `a[1:-1]`, `a[::2]`).
+  - Sets are unordered collections of simple objects. Sets are mutable.
+  - When you create an object and assign it to a variable, the variable only *refers* to the object and does not represent the object itself. The variable name points to that part of your computer's memory where the object is stored. This is called *binding* the name to object.
+  - `a[1:3]` returns a slice of the sequence starting at position 1, includes position 2 but stops at position 3(but do not change the refer to the original sequence). `a[:]` returns a copy of whole sequence.
+  - if you want to make a copy of sequences or complex objects (not simple objects such as integers), then you have to use the *slicing operation* or `copy()` fuction. Otherwise will refer to the same object.
 '''
 tags: []
 isStarred: true
 createdAt: "2017-05-19T21:52:01.308Z"
-updatedAt: "2017-05-25T21:39:13.401Z"
+updatedAt: "2017-05-26T04:13:38.782Z"
