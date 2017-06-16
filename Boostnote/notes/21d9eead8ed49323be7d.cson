@@ -50,10 +50,21 @@ content: '''
   - **fields** are of two types - they can belong to each instance of the class or they can belong to the class itself. They are called **instance variables** and **class variables** respectively.
   - **class variables** are shared -- they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object make a change to a class variable, that change will be seen by all other instances.
   - **instance varibales** are owned by each individual instance if the class. In this case, each object has its own copy of the fields.
+  - class variable is refered as `<class_name>.<variable_name>` or `self.__class__.<variable_name>`.
+  - instance variable is refered as `self.<variable>`
+  - every instance refers to its class via the `self.__class__`attribute.
+  - we can define a **classmethod/staticmethod** by using a decorator `@classmethod`.
+  - `@classmethod` decorator is same as calling:
+      `<method_name> = classmethod(<method_name>)`
+  - all class member are public except using *double underscore prefix* such as `__private_var`.
+  - We can access the class docstring at runtime using `<class_name>.__doc__` and the method docstring as `<class_name>.<method_name>.__doc__`.
+  - All class members (including the data members) are *public* and all the methods are *virtual* in Python.
+  - the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. *And this is only a convention and is not enforced by Python (except for the double underscore prefix)*.
+  - 
 '''
 tags: [
   "python"
 ]
 isStarred: true
 createdAt: "2017-05-19T21:52:01.308Z"
-updatedAt: "2017-06-16T07:40:30.139Z"
+updatedAt: "2017-06-16T09:57:14.748Z"
