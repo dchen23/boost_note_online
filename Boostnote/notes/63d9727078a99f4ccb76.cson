@@ -1,0 +1,16 @@
+type: "MARKDOWN_NOTE"
+folder: "6cbe5818d58870c04fde"
+title: "phases in the process of writing a software"
+content: '''
+  # phases in the process of writing a software
+  1. What (Analysis)
+  2. How (Design)
+  3. Do it (Implementation)
+  4. Test (Testing and Debugging)
+  5. Use (Operation or Deployment)
+  6. Maintain (Refinement)
+'''
+tags: []
+isStarred: false
+createdAt: "2017-06-13T07:50:58.427Z"
+updatedAt: "2017-06-13T07:52:51.343Z"

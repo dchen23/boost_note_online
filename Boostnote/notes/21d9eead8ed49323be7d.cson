@@ -44,8 +44,16 @@ content: '''
   - When you create an object and assign it to a variable, the variable only *refers* to the object and does not represent the object itself. The variable name points to that part of your computer's memory where the object is stored. This is called *binding* the name to object.
   - `a[1:3]` returns a slice of the sequence starting at position 1, includes position 2 but stops at position 3(but do not change the refer to the original sequence). `a[:]` returns a copy of whole sequence.
   - if you want to make a copy of sequences or complex objects (not simple objects such as integers), then you have to use the *slicing operation* or `copy()` fuction. Otherwise will refer to the same object.
+  
+  ## 6. OOP
+  - the`__init__` method is run as soon as an object of a class is instantiated.
+  - **fields** are of two types - they can belong to each instance of the class or they can belong to the class itself. They are called **instance variables** and **class variables** respectively.
+  - **class variables** are shared -- they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object make a change to a class variable, that change will be seen by all other instances.
+  - **instance varibales** are owned by each individual instance if the class. In this case, each object has its own copy of the fields.
 '''
-tags: []
+tags: [
+  "python"
+]
 isStarred: true
 createdAt: "2017-05-19T21:52:01.308Z"
-updatedAt: "2017-05-26T04:13:38.782Z"
+updatedAt: "2017-06-16T07:40:30.139Z"

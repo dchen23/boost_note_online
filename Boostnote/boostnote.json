@@ -14,6 +14,16 @@
       "key": "a4fb54a45d03e5216c46",
       "color": "#3FD941",
       "name": "Spring"
+    },
+    {
+      "key": "bb3caf38d1d27e988c0b",
+      "color": "#E8D252",
+      "name": "Android"
+    },
+    {
+      "key": "b078f05073b5c328942c",
+      "color": "#30D5C8",
+      "name": "python"
     }
   ],
   "version": "1.0"

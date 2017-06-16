@@ -1,0 +1,11 @@
+type: "MARKDOWN_NOTE"
+folder: "b078f05073b5c328942c"
+title: "Tips"
+content: '''
+  # Tips
+  ### `os.sep` -- gives the directory separator according to your operating system
+'''
+tags: []
+isStarred: false
+createdAt: "2017-06-13T06:43:14.009Z"
+updatedAt: "2017-06-13T06:44:22.854Z"
