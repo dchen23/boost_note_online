@@ -60,11 +60,43 @@ content: '''
   - We can access the class docstring at runtime using `<class_name>.__doc__` and the method docstring as `<class_name>.<method_name>.__doc__`.
   - All class members (including the data members) are *public* and all the methods are *virtual* in Python.
   - the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. *And this is only a convention and is not enforced by Python (except for the double underscore prefix)*.
-  - 
+  - Python *always* starts looking for methods in actual type. If it could not find the method, it starts looking at the methods belonging to its base classes one by one in the order they are specified in the tuple in the class definition.
+  - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
+  - The `end` parameter is used in the `print` function in the superclass's method to print a line and allow the next print to continue in the same line.
+  
+  ## 7. I/O
+  - By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
+  - The mode can be a read mode(`r`), write mode(`w`) or append mode(`a`). we can also specify whether we are reading, writing, or appending in text mode(`t`) or binary mode(`b`).
+  
+  ## 8. Exceptions
+  
+  ## 9. More
+  - The usage of `a, b = <some expression>` interprets the result of the expression as a tuple with two values.
+  - The fastest way to swap two variables in Python: `a, b = b, a`
+  - Some useful special methods:
+    - `__init__(self, ...)`
+      - This method is called just before the newly created object/instance is returned for usage.
+    - `__del__(self)`
+      - Called just before the object/instance is destoryed(which has unpredictable timing, so avoid using this)
+    - `__str__(self)`
+      - Called when we use the `print` function or when `str()` is used
+    - `__lt__(self, other)`
+      - Called when the *less than* operator (<) is used. Similarly, there are special methods for all the operators(+, >, etc.)
+    - `__getitem__(self, key)`
+      - Called when `x[key]` index operator is used.
+    - `__len__(self)`
+      - Called when the build-in `len()` function is used for the sequence object.
+  - Single statement blocks:
+    ``` python
+    flag = ture
+    if flag: print('Yes')`
+    ```
+  - If we have a `*` prefix on the funtion argument `args`, all extra arguments passed to the function are stored in `args` as a tuple. If a `**` prefix had been used instead, the extra arguments will be considered to be key/value pairs of a dictionary.
+  
 '''
 tags: [
   "python"
 ]
 isStarred: true
 createdAt: "2017-05-19T21:52:01.308Z"
-updatedAt: "2017-06-16T09:57:14.748Z"
+updatedAt: "2017-06-18T03:02:56.542Z"
