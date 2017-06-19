@@ -23,7 +23,12 @@
     {
       "key": "b078f05073b5c328942c",
       "color": "#30D5C8",
-      "name": "python"
+      "name": "Python"
+    },
+    {
+      "key": "3811c49fc8b9a0ffc52a",
+      "color": "#2BA5F7",
+      "name": "Java"
     }
   ],
   "version": "1.0"

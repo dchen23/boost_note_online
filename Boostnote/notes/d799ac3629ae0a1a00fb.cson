@@ -1,0 +1,13 @@
+type: "MARKDOWN_NOTE"
+folder: "3811c49fc8b9a0ffc52a"
+title: "CallBack Function"
+content: '''
+  # CallBack Function
+  * A callback function is a function which is:
+    * passed as an argument to another function, and
+    * is invoked after some kind of event
+'''
+tags: []
+isStarred: false
+createdAt: "2017-06-19T23:27:16.694Z"
+updatedAt: "2017-06-19T23:28:50.326Z"
