@@ -1,0 +1,16 @@
+type: "MARKDOWN_NOTE"
+folder: "bb3caf38d1d27e988c0b"
+title: "Android camera2 API"
+content: '''
+  # Android camera2 API
+  
+  ![Image of camera2 workflow](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/camera2_workflow.png)
+  
+  ![Image of camera2 class](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/camera2_class.png)
+  
+  ![Image of camera2 shot](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/camera2_shot.png)
+'''
+tags: []
+isStarred: false
+createdAt: "2017-06-24T00:26:39.618Z"
+updatedAt: "2017-06-24T00:30:38.314Z"
