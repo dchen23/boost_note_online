@@ -3,7 +3,7 @@ folder: "6cbe5818d58870c04fde"
 title: "Snippet note example"
 description: '''
   Snippet note example
-  You can store a series of snippet as a single note like Gist.
+  You can store a series of snippets as a single note, like Gist.
 '''
 snippets: [
   {
@@ -12,7 +12,7 @@ snippets: [
     content: '''
       <html>
       <body>
-      <h1 id='hello'>Hello World</h1>
+      <h1 id='hello'>Enjoy Boostnote!</h1>
       </body>
       </html>
     '''
@@ -21,14 +21,14 @@ snippets: [
     name: "example.js"
     mode: "javascript"
     content: '''
-      var html = document.getElementById('hello').innerHTML
+      var boostnote = document.getElementById('enjoy').innerHTML
       
-      console.log(html)
+      console.log(boostnote)
     '''
   }
 ]
 tags: []
 isStarred: false
-createdAt: "2017-04-21T06:52:30.728Z"
-updatedAt: "2017-09-22T06:54:25.537Z"
-isTrashed: true
+isTrashed: false
+createdAt: "2017-09-12T04:03:59.261Z"
+updatedAt: "2017-09-12T04:03:59.261Z"

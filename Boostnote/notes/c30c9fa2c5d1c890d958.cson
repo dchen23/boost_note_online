@@ -1,0 +1,48 @@
+type: "MARKDOWN_NOTE"
+folder: "2824f3e225f36c2e7962"
+title: "Project02"
+content: '''
+  # Project02
+  
+  ## Requirement:
+  - [ ] support command history (only last 10 cmds)
+  - [ ] "[#]$"
+  - [ ] supoort execute commands that are in the current directory using "./"
+  - [ ] execute an command available in the PATH environment variable.
+  - [ ] print error message:
+  ``` bash
+  [3]$ foobar
+  foobar:command not found
+  ```
+  - [ ] pass arguments to commands
+  - [ ] support file output redirection (create or overwrite)
+  ```bash
+  [5]$ echo hi there > hi.txt
+  ```
+  - [ ] support pipe redirection
+  ```bash
+  [6]$ echo world hello | wc
+        1       2      12
+  ```
+  - [ ] support *built-in* `cd` command to change directories, cd itself should return you to the home directory (use chdir sys call)
+  - [ ] support !command to execute cmd from history (both line number and string prefix)
+  - [ ] support *built-in* `exit` command to exit usfsh
+  
+  ## Note:
+  - use strtok() for parsing the command line
+  
+  ## Bonus
+  - [sh-1] Support file input redirection with "<" (e.g., $ sort < file.txt)
+  - [sh-2] Support chaining multiple commands via pipes (e.g., $ ls | sort -r | head -n 3)
+  - [sh-3] Support mixing pipe redirection and file redirection (e.g., $ ls | sort -r > out.txt)
+  - [sh-5] Support <TAB> command completion (this is hard).
+  - [sh-6] Support background processing with &  (e.g., $ some_command &)
+  - [sh-7] Support for the && shell operator (e.g., $ c1 && c2) Note you must check that c1 succeeded in order to execute c2.
+  - [sh-8] Support for the || shell operator
+  - [sh-9] Add support for showing the duration (in seconds) of each command in the history list (e.g., 1 [0.02 seconds] ls
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-09-22T03:55:10.788Z"
+updatedAt: "2017-09-22T04:17:52.365Z"

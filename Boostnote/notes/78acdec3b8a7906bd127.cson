@@ -1,0 +1,20 @@
+type: "MARKDOWN_NOTE"
+folder: "2824f3e225f36c2e7962"
+title: "Class Note"
+content: '''
+  # Class Note
+  
+  - Program -- Process: a program in execution. 
+  ---
+  quiz04: 
+  - [ ] DDSP ch3
+  - [ ] Lecture Notes
+  - [ ] fork()/exec()
+  - [ ] file descriptors
+  - [ ] pipes
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-09-14T22:22:20.853Z"
+updatedAt: "2017-09-22T04:17:11.003Z"

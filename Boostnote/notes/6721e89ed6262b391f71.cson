@@ -1,0 +1,13 @@
+type: "MARKDOWN_NOTE"
+folder: "82fd2f6ef76894961133"
+title: "查看端口占用"
+content: '''
+  # 查看端口占用
+  
+  `netstat -apn`
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-09-18T05:30:26.073Z"
+updatedAt: "2017-09-18T05:32:43.774Z"

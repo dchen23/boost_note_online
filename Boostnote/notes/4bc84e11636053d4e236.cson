@@ -1,0 +1,13 @@
+type: "MARKDOWN_NOTE"
+folder: "4ff331626e7937f1a87a"
+title: "Flink 概念"
+content: '''
+  Flink 概念
+  
+  - 允许程序将Table API 和 DataStream 和 DataSet 混用
+'''
+tags: []
+isStarred: false
+isTrashed: true
+createdAt: "2017-09-21T17:30:40.109Z"
+updatedAt: "2017-09-21T17:54:46.011Z"

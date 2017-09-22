@@ -29,6 +29,26 @@
       "key": "3811c49fc8b9a0ffc52a",
       "color": "#2BA5F7",
       "name": "Java"
+    },
+    {
+      "key": "2824f3e225f36c2e7962",
+      "color": "#FF8E00",
+      "name": "Operating System"
+    },
+    {
+      "key": "82fd2f6ef76894961133",
+      "color": "#2BA5F7",
+      "name": "CMD"
+    },
+    {
+      "key": "4ff331626e7937f1a87a",
+      "color": "#E10051",
+      "name": "SnapLogic"
+    },
+    {
+      "key": "1b291bf5c7d96c75dda5",
+      "color": "#E8D252",
+      "name": "Nine Chapter"
     }
   ],
   "version": "1.0"

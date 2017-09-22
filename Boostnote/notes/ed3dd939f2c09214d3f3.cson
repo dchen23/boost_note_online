@@ -1,0 +1,36 @@
+type: "MARKDOWN_NOTE"
+folder: "1b291bf5c7d96c75dda5"
+title: "InterView Tips"
+content: '''
+  # InterView Tips
+  
+  ## Time Complexity
+  
+  - O(1): 极少
+  - O(logn): 几乎都是二分法
+  - O(√n): 几乎是分解质因数
+  - O(n): 高频
+  - O(nlogn): 一般都可能要排序
+  - O(n^2): 数据，枚举，动态规划
+  - O(n^3): 数组，枚举，动态规划
+  - O(2^n): 组合相关的搜索
+  - O(n!): 排列相关的搜索
+  
+  ## Recursion or Non-Recursion
+  
+  - Ask...
+  - Is it hard to implement
+  
+  ## Bug Free
+  
+  ## Don't Waste Time
+  - KMP
+  - red-black tree
+  - AVL
+  - ACM etc.
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-09-22T06:09:03.070Z"
+updatedAt: "2017-09-22T06:22:48.103Z"

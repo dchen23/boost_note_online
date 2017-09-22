@@ -1,0 +1,74 @@
+type: "MARKDOWN_NOTE"
+folder: "6cbe5818d58870c04fde"
+title: "Tutorial"
+content: '''
+  # Tutorial
+  ---
+  ## Todo
+  
+  - [ ] 1
+  - [ ] 2
+  - [ ] 3
+  - [ ] 4
+  
+  ## Inline Equation (LaTeX)
+  I don't know $$E=mc^2$$.
+  
+  ## Equation ([MathJax](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference))
+  $$\\sum_{i=1}^n a_i=0$$
+  
+  $$f(x_1,x_x,\\ldots,x_n) = x_1^2 + x_2^2 + \\cdots + x_n^2$$
+  
+  $$\\sum^{j-1}_{k=0}{{\\gamma}_{kj} z_k}$$
+  
+  ## Highlight code
+  ```python
+  @requires_authorization
+  class SomeClass:
+      pass
+  
+  if __name__ == '__main__':
+      # A comment
+      print 'hello world'
+  ```
+  
+  ## Form
+  | 项目        | 价格   |  数量  |
+  | --------   | -----:  | :----:  |
+  | 计算机     | \\$1600 |   5     |
+  | 手机        |   \\$12   |   12   |
+  | 管线        |    \\$1    |  234  |
+  
+  ## Quote
+  > Nothing
+  
+  ## Inline Code Block
+  `print "hello"`
+  
+  ## Code Block
+      This is a code block
+  
+  ## Deleted Text
+  ~~WRONG TEXT~~
+  
+  ## HTML TAG
+  
+  <table>
+      <tr>
+          <th rowspan="2">值班人员</th>
+          <th>星期一</th>
+          <th>星期二</th>
+          <th>星期三</th>
+      </tr>
+      <tr>
+          <td>李强</td>
+          <td>张明</td>
+          <td>王平</td>
+      </tr>
+  </table>
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-09-22T06:29:51.083Z"
+updatedAt: "2017-09-22T06:48:52.973Z"

@@ -1,0 +1,30 @@
+type: "MARKDOWN_NOTE"
+folder: "1b291bf5c7d96c75dda5"
+title: "Binary Search"
+content: '''
+  # Binary Search
+  
+  ## Core
+  
+  T(n) = T(n/2) + O(1) = O(logn)
+  
+  ## Frequent mistake
+  
+  - endless loop
+  - the terminal of the loop
+    - start <= end
+    - start < end
+    - start + 1 < end
+  - which position should the pointer move
+    - start = mid
+    - start = mid + 1
+    - start = mid - 1
+  
+  ## Template
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-09-22T06:07:21.483Z"
+updatedAt: "2017-09-22T06:28:56.386Z"
