@@ -22,6 +22,7 @@ content: '''
   - Is it hard to implement
   
   ## Bug Free
+   - Code Style
   
   ## Don't Waste Time
   - KMP
@@ -33,4 +34,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-22T06:09:03.070Z"
-updatedAt: "2017-09-22T06:22:48.103Z"
+updatedAt: "2017-09-22T07:45:02.031Z"

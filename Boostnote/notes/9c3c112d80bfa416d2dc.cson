@@ -21,10 +21,43 @@ content: '''
     - start = mid - 1
   
   ## Template
+      start + 1 < end
+      start + (end - start)/2
+      A[mid] ==, < , >
+      A[start] A[end] ? target
+      
+  - [ ] binary-search
+  - [ ] classical-binary-search
+  - [ ] first-position-of-target
+  - [ ] last-position-of-target
   
+  ## oooo...ooxxx...xxxx
+  find the last `o` or first `x`
+  - [ ] first-bad-version
+  - [ ] search-in-a-big-sorted-array
+  - [ ] find-minimum-in-rotated-sorted-array
+  
+  - [ ] Search a 2D Matrix
+    - [ ] search-a-2d-matrix
+    - [ ] search-a-2d-matrix-ii
+  
+  - [ ] Search for a Range
+    - [ ] search-for-a-range
+    - [ ] total-occurrence-of-target
+  
+  - [ ] Maximum Number in Mountain Sequence
+    - [ ] maximum-number-in-mountain-sequence
+  
+  - [ ] Smallest Rectangle Enclosing black Pixels
+    - [ ] smallest-rectangle-enclosing-black-pixels
+  
+  ## Non-ooxx
+  - [ ] maximum-number-in-mountain-sequence
+  - [ ] find-peak-element
+  - [ ] <font color=red>search-in-rotated-sorted-array</font>
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-22T06:07:21.483Z"
-updatedAt: "2017-09-22T06:28:56.386Z"
+updatedAt: "2017-09-22T07:44:12.568Z"
