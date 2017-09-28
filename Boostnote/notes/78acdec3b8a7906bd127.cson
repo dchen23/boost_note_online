@@ -6,15 +6,33 @@ content: '''
   
   - Program -- Process: a program in execution. 
   ---
-  quiz04: 
+  quiz 04: 
   - [ ] DDSP ch3
   - [ ] Lecture Notes
   - [ ] fork()/exec()
   - [ ] file descriptors
   - [ ] pipes
+  
+  ---
+  
+  quiz 05
+  - [ ] OSPP ch2 2.1 - 2.3
+  
+  Midterm (Oct 10th)
+  - [ ] sample
+  
+  ---
+  
+  ## File System
+  
+  - DOS FAT
+  - NTFS
+  - LINUX : ext3, ext4
+  - Disk : blocks(512 bytes)
+  - `ln` : inode
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-14T22:22:20.853Z"
-updatedAt: "2017-09-22T04:17:11.003Z"
+updatedAt: "2017-09-28T22:37:59.474Z"

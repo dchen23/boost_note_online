@@ -6,15 +6,15 @@ content: '''
   
   ## Requirement:
   - [ ] support command history (only last 10 cmds)
-  - [ ] "[#]$"
-  - [ ] supoort execute commands that are in the current directory using "./"
-  - [ ] execute an command available in the PATH environment variable.
-  - [ ] print error message:
+  - [x] "[#]$"
+  - [x] supoort execute commands that are in the current directory using "./"
+  - [x] execute an command available in the PATH environment variable.
+  - [x] print error message:
   ``` bash
   [3]$ foobar
   foobar:command not found
   ```
-  - [ ] pass arguments to commands
+  - [x] pass arguments to commands
   - [ ] support file output redirection (create or overwrite)
   ```bash
   [5]$ echo hi there > hi.txt
@@ -24,9 +24,9 @@ content: '''
   [6]$ echo world hello | wc
         1       2      12
   ```
-  - [ ] support *built-in* `cd` command to change directories, cd itself should return you to the home directory (use chdir sys call)
+  - [x] support *built-in* `cd` command to change directories, cd itself should return you to the home directory (use chdir sys call)
   - [ ] support !command to execute cmd from history (both line number and string prefix)
-  - [ ] support *built-in* `exit` command to exit usfsh
+  - [x] support *built-in* `exit` command to exit usfsh
   
   ## Note:
   - use strtok() for parsing the command line
@@ -45,4 +45,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-22T03:55:10.788Z"
-updatedAt: "2017-09-22T04:17:52.365Z"
+updatedAt: "2017-09-26T05:13:27.978Z"
