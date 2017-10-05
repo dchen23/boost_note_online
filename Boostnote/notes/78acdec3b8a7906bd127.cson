@@ -11,7 +11,7 @@ content: '''
   - [ ] Lecture Notes
   - [ ] fork()/exec()
   - [ ] file descriptors
-  - [ ] pipes
+  - [x] pipes
   
   ---
   
@@ -28,11 +28,11 @@ content: '''
   - DOS FAT
   - NTFS
   - LINUX : ext3, ext4
-  - Disk : blocks(512 bytes)
-  - `ln` : inode
+  - Disk : blocks(512 bytes) ![disc block](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/disc.jpg)
+  - `ln` : inode ![inode](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/inode.jpeg)
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-14T22:22:20.853Z"
-updatedAt: "2017-09-28T22:37:59.474Z"
+updatedAt: "2017-10-05T02:26:32.928Z"

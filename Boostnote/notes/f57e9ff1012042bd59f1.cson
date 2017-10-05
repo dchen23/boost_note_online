@@ -1,0 +1,56 @@
+type: "MARKDOWN_NOTE"
+folder: "770b506064e20e1eb4bf"
+title: "Project 01"
+content: '''
+  # Project 01
+  
+  ## Requirement
+  
+  - multiple storage nodes
+  - **Parallel retrievals**: large files will be split into multiple *chunks*. Client applications retrieve these chunks in parallel.
+  - **Interoperability**: the DFS will use Google Protocol Buffer to serialize messages.
+  - **Fault tolerance**: your system must be able to detect and withstand two concurrent storage node failures and continues operating normally. It will also be able to revocer corrupted files
+  - communication between components must be implemented via sockets (no external libraries.)
+  - include following componments:
+    - Controller: 
+    The Controller manages a few data structures:
+      - A list of active nodes
+      - A list of files
+      - For each file, a lists of its chunks and where they are located.
+    - Storage Node
+    Some messages that your storage node could accept (TBD)
+      - Store chunk [File name, Chunk Number, Chunk Data]
+      - Retrieve chunk [File name, Chunk Number]
+    - Client
+    The client's main functions include:
+      - Breaking files into chunks, asking the Controller where to store them, and then sending them to the appropriate storage node(s). **Note**: Once the first chunk has been transferred to its destination storage node, that node will pass the chunk along in a pipeline fashion. The client shound not send each chunk 3 times.
+      - Retrieving files in parallel. Each chunk in the file being requested and transferred on a separate thread. Once the chunks are retrieved, the file is reconstructed on the client machine.
+  
+  ## Project Deliverables
+  #### 20 points.
+  - [ ] [2 pts]: A brief design documents (1 page). You may use UML diagrams, Vizio, OmniGraggle, or even pen and paper. This outlines:
+    - Components of your DFS (this includes the components outlined above but might include other items that you think you'll need)
+    - Design decisions (how big the chunks shoud be, how you will place replicas, etc...)
+    - Messages the components will use to communicate
+  - [ ] [6 pts]: Control node implementation:
+    - [ ] [1] File list and chunk list
+    - [ ] [1] Storage node list
+    - [ ] [2] Detecting a node failture
+    - [ ] [2] Replica maintenance
+  - [ ] [5 pts]: Storage node implementation
+    - [ ] [2] Storing chunks and checksums on the local disks
+    - [ ] [2] Detecting (and recovering from) file corruption
+    - [ ] [1] Heartbeat messages
+  - [ ] [5 pts]: Client implementation:
+    - [ ] [2] Storing files (chunk creation, determining appropriate servers)
+    - [ ] [2] Retrieving files in parallel
+    - [ ] [1] Viewing the file list and availlable disk space
+  - [ ] [2 pts]: Project retrospective document
+  
+  **Note**: your system must be able to support **at least 10** active storage nodes.
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-10-03T07:09:33.020Z"
+updatedAt: "2017-10-05T00:56:19.625Z"
