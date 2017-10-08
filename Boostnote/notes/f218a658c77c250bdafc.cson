@@ -1,0 +1,116 @@
+type: "SNIPPET_NOTE"
+folder: "2824f3e225f36c2e7962"
+title: "cat function with buffered"
+description: "cat function with buffered"
+snippets: [
+  {
+    name: "cat_buffer.c"
+    mode: "C"
+    content: '''
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      #include <fcntl.h>
+      #include <unistd.h>
+      
+      struct buffer
+      {
+          int fd;
+          int chunk_size;
+          char *chunk;
+          int bufpos;
+          int buflen;
+      };
+      
+      struct buffer* new_buffer(int fd, int size)
+      {
+          struct buffer *buf;
+      
+          buf = (struct buffer *) malloc(sizeof(struct buffer));
+          buf->chunk = (char *)malloc(sizeof(char) * size);
+      
+          buf->fd = fd;
+          buf->chunk_size = size;
+          buf->bufpos = size;
+          buf->buflen = size;
+          return buf;
+      }
+      
+      void free_buffer(struct buffer *buf)
+      {
+          free(buf);
+      }
+      
+      int buffer_readline(struct buffer *buf, char *line, int len)
+      {
+          int count = 0;
+          while (1)
+          {
+              if (buf->buflen != buf->chunk_size && buf->buflen == buf->bufpos)
+              {
+                  break;
+              }
+      
+              if (buf->bufpos == buf->chunk_size)
+              {
+                  buf->buflen = read(buf->fd, buf->chunk, buf->chunk_size);
+      
+                  if (buf->buflen < 0)
+                  {
+                     return buf->buflen;
+                  }
+                  if (buf->buflen == 0)
+                  {
+                      break;
+                  }
+                  buf->bufpos = 0;
+              }
+      
+              line[count] = buf->chunk[buf->bufpos];
+              count += 1;
+              buf->bufpos += 1;
+      
+              if (buf->chunk[buf->bufpos - 1] == '\\n')
+              {
+                  break;
+              }
+      
+              if (count == len)
+              {
+                  count = -1;
+                  return count;
+              }
+          }
+      
+          line[count] = '\\0';
+      
+          return count;
+      }
+      
+      int main(int argc, char **argv)
+      {
+          char line[512];
+      
+          int fd = open(argv[1], O_RDONLY);
+      
+          struct buffer *buf;
+          buf = new_buffer(fd, 32);
+      
+          while (buffer_readline(buf, line, 512) > 0)
+          {
+              printf("%s", line);
+          }
+      
+          free_buffer(buf);
+      
+          return 0;
+      }
+      
+    '''
+  }
+]
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-10-06T00:28:40.289Z"
+updatedAt: "2017-10-06T00:29:20.320Z"
