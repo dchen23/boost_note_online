@@ -1,0 +1,25 @@
+type: "MARKDOWN_NOTE"
+folder: "2824f3e225f36c2e7962"
+title: "xv6 - book"
+content: '''
+  # xv6 - book
+  
+  ## ch0
+  
+  ## ch1
+  
+  An operating system must fulﬁl three requirements: multiplexing, isolation, and interaction.
+  
+  Monolithic kernel means that the whole operating system runs in kernel mode (i.e. highly privileged by the hardware). That is, no part of the OS runs in user mode (lower privilege). Only applications on top of the OS run in user mode.
+  
+  In non-monolithic kernel operating systems, such as Windows, a large part of the OS itself runs in user mode.
+  
+  In either case, the OS can be highly modular.
+  
+  ![monolithic kenerl vs microkernel]()
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-02T06:34:14.956Z"
+updatedAt: "2017-11-02T07:02:40.359Z"

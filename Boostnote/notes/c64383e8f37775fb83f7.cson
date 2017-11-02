@@ -1,0 +1,93 @@
+type: "SNIPPET_NOTE"
+folder: "3811c49fc8b9a0ffc52a"
+title: "Java MD5 hashing example"
+description: '''
+  Java MD5 hashing example
+  
+'''
+snippets: [
+  {
+    name: "MD5CheckSumExample.java"
+    mode: "Java"
+    content: '''
+      import java.io.FileInputStream;
+      import java.security.MessageDigest;
+      
+      public class MD5CheckSumExample
+      {
+          public static void main(String[] args)throws Exception
+          {
+              MessageDigest md = MessageDigest.getInstance("MD5");
+              FileInputStream fis = new FileInputStream("c:\\\\loging.log");
+      
+              byte[] dataBytes = new byte[1024];
+      
+              int nread = 0;
+              while ((nread = fis.read(dataBytes)) != -1) {
+                  md.update(dataBytes, 0, nread);
+              };
+              byte[] mdbytes = md.digest();
+      
+              //convert the byte to hex format method 1
+              StringBuffer sb = new StringBuffer();
+              for (int i = 0; i < mdbytes.length; i++) {
+                  sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16).substring(1));
+              }
+      
+              System.out.println("Digest(in hex format):: " + sb.toString());
+      
+              //convert the byte to hex format method 2
+              StringBuffer hexString = new StringBuffer();
+          	  for (int i=0;i<mdbytes.length;i++) {
+          		    String hex=Integer.toHexString(0xff & mdbytes[i]);
+         	     	  if(hex.length()==1) hexString.append('0');
+         	     	  hexString.append(hex);
+          	  }
+          	System.out.println("Digest(in hex format):: " + hexString.toString());
+          }
+      }
+    '''
+  }
+  {
+    name: "MD5HashingExample.java"
+    mode: "Java"
+    content: '''
+      import java.security.MessageDigest;
+      
+      public class MD5HashingExample
+      {
+          public static void main(String[] args)throws Exception
+          {
+          	  String password = "123456";
+      
+              MessageDigest md = MessageDigest.getInstance("MD5");
+              md.update(password.getBytes());
+      
+              byte byteData[] = md.digest();
+      
+              //convert the byte to hex format method 1
+              StringBuffer sb = new StringBuffer();
+              for (int i = 0; i < byteData.length; i++) {
+               sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+              }
+      
+              System.out.println("Digest(in hex format):: " + sb.toString());
+      
+              //convert the byte to hex format method 2
+              StringBuffer hexString = new StringBuffer();
+          	  for (int i=0;i<byteData.length;i++) {
+          		  String hex=Integer.toHexString(0xff & byteData[i]);
+         	     	if(hex.length()==1) hexString.append('0');
+         	     	hexString.append(hex);
+          	  }
+          	  System.out.println("Digest(in hex format):: " + hexString.toString());
+          }
+      }
+    '''
+  }
+]
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-10-18T21:24:59.165Z"
+updatedAt: "2017-10-18T21:28:59.260Z"

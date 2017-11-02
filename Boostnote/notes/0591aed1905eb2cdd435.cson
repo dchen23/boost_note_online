@@ -1,0 +1,17 @@
+type: "MARKDOWN_NOTE"
+folder: "2824f3e225f36c2e7962"
+title: "OSPP ch2"
+content: '''
+  # OSPP ch2
+  
+  When running the operating system kernel, the processor is like a warden in charge of an insane asylum with complete access to everything. At other times, the processor runs application code in a process — the processor becomes an inmate, wearing a straightjacket locked in a padded cell by the warden, protected from harming anyone else.
+  
+  applications cannot disable processor interrupts
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-02T02:24:36.744Z"
+updatedAt: "2017-11-02T05:57:02.383Z"

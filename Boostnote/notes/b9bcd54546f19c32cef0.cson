@@ -1,0 +1,34 @@
+type: "MARKDOWN_NOTE"
+folder: "770b506064e20e1eb4bf"
+title: "Project 02"
+content: '''
+  # Project 02
+  
+  ## Grading
+  ### Deliverable I
+  - [ ] Warm-up
+    - [ ] [.5] How many records are in dataset?
+    - [ ] [.5] Are there any Geohashed that have snow depths greater than zero for the entire year? List some of the top Geohashes.
+    - [ ] [.5] When and where was the hottest temperature observed in the dataset? Is it an anomaly?
+  - [ ] Analysis
+    - [ ] [1] Where are you most likely to be struck by lightning? Use a precision of 4 Geohash characters and provide the top 3 locations.
+    - [ ] [1] What is the driest month in the bay area? This should include a histogram with data from each month. (Note: how did you determine what data points are in the bay area?)
+    - [ ] [2] After graduating from USF, you found a startup that aims to provide personalized travel itineraries using big data analysis. Given your own personal preferences, build a plan for a year of travel across 5 locations. Or, in other words: pick 5 regions. What is the best time of year to visit them based on the dataset?
+    - [ ] [2] Your travel startup is so successful that you move on to green energy; here, you want to help power companies plan out the locations of solar and wind farms across North America. Write a MapReduce job that locates the top 3 places for solar and wind farms, as well as a combination of both (solar + wind farm). You will report a total of 9 Geohashes as well as their relevant attributes (for example, cloud cover and wind speeds).
+    - [ ] [2] Given a Geohash prefix, create a climate chart for the region. This includes high, low, and average temperatures, as well as monthly average rainfall. Here’s a (poor quality) script that will generate this for you.
+  
+  ### Deliverable II
+  
+  - [ ] [3.5] Now that you’ve found the answers to the questions above, design your own problem to analyze. This should be sufficiently difficult, and you should be creative! Some ideas:
+    - Visualization of multiple related features. Your visualization should help tell a story.
+    - Determining the comfort index for a region. You could incorporate several features here: not too hot, not too cold, dry, humid, windy, etc. There are several different ways of calculating this available online, and you could analyze how well your metrics do.
+    - Advanced summary statistics: finding how particular features interact or are correlated (you could use Pearson’s Correlation Coefficient). Mins, maxes, std deviation, etc. Your analysis here should have a greater goal in mind, not just reporting raw numbers.
+  
+    Certainly reach out if you aren’t sure about your idea. The main goal here is to have fun with the data (well, and also learn MapReduce!)
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-10-26T00:50:37.271Z"
+updatedAt: "2017-10-30T19:22:47.106Z"
+isPinned: true
