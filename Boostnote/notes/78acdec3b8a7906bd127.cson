@@ -15,9 +15,6 @@ content: '''
   
   ---
   
-  quiz 05
-  - [ ] OSPP ch2 2.1 - 2.3
-  
   Midterm (Oct 10th)
   - [ ] sample
   
@@ -30,9 +27,23 @@ content: '''
   - LINUX : ext3, ext4
   - Disk : blocks(512 bytes) ![disc block](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/disc.jpg)
   - `ln` : inode ![inode](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/inode.jpeg)
+  
+  ---
+  # xv6
+  
+  quiz 05
+  - [ ] OSPP ch2 2.1 - 2.7
+  - [ ] xv6 book ch0
+  
+  ## Introduction
+  xv6 -> C + x86 Assembly -> compile/link -> kernel -> run on Qemu.
+  
+  quiz 06 - Tue Oct 31
+  - [ ] xv6 ch 1,4,5
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-14T22:22:20.853Z"
-updatedAt: "2017-10-05T02:26:32.928Z"
+updatedAt: "2017-10-30T07:42:57.582Z"
+isPinned: true

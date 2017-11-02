@@ -28,24 +28,24 @@ content: '''
   
   ## Project Deliverables
   #### 20 points.
-  - [ ] [2 pts]: A brief design documents (1 page). You may use UML diagrams, Vizio, OmniGraggle, or even pen and paper. This outlines:
+  - [x] [2 pts]: A brief design documents (1 page). You may use UML diagrams, Vizio, OmniGraggle, or even pen and paper. This outlines:
     - Components of your DFS (this includes the components outlined above but might include other items that you think you'll need)
     - Design decisions (how big the chunks shoud be, how you will place replicas, etc...)
     - Messages the components will use to communicate
-  - [ ] [6 pts]: Control node implementation:
-    - [ ] [1] File list and chunk list
-    - [ ] [1] Storage node list
-    - [ ] [2] Detecting a node failture
-    - [ ] [2] Replica maintenance
-  - [ ] [5 pts]: Storage node implementation
-    - [ ] [2] Storing chunks and checksums on the local disks
-    - [ ] [2] Detecting (and recovering from) file corruption
-    - [ ] [1] Heartbeat messages
-  - [ ] [5 pts]: Client implementation:
-    - [ ] [2] Storing files (chunk creation, determining appropriate servers)
-    - [ ] [2] Retrieving files in parallel
-    - [ ] [1] Viewing the file list and availlable disk space
-  - [ ] [2 pts]: Project retrospective document
+  - [x] [6 pts]: Control node implementation:
+    - [x] [1] File list and chunk list
+    - [x] [1] Storage node list
+    - [x] [2] Detecting a node failture
+    - [x] [2] Replica maintenance
+  - [x] [5 pts]: Storage node implementation
+    - [x] [2] Storing chunks and checksums __on the local disks__
+    - [x] [2] Detecting (and recovering from) file corruption
+    - [x] [1] Heartbeat messages
+  - [x] [5 pts]: Client implementation:
+    - [x] [2] Storing files (chunk creation, determining appropriate servers)
+    - [x] [2] Retrieving files in parallel
+    - [x] [1] Viewing the file list and availlable disk space
+  - [x] [2 pts]: Project retrospective document
   
   **Note**: your system must be able to support **at least 10** active storage nodes.
 '''
@@ -53,4 +53,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-10-03T07:09:33.020Z"
-updatedAt: "2017-10-05T00:56:19.625Z"
+updatedAt: "2017-10-30T07:41:45.439Z"
