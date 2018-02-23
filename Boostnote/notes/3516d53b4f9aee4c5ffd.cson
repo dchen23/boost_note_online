@@ -1,0 +1,58 @@
+createdAt: "2018-02-06T02:18:23.365Z"
+updatedAt: "2018-02-08T00:44:47.808Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "Arcanist 快速上手"
+content: '''
+  #  Arcanist 快速上手
+  
+  [Mac 环境指南]()
+  [Windows 环境指南]()
+  
+  ## 安装 Arcanist
+  首先，安装 Arcanist 所需的依赖库
+  - 安装 PHP
+  - 安装 Git
+  
+  从 github 上下载安装 Arcanist：
+  
+      $ mkdir somewhere/
+      $ cd somewhere/
+      somewhere/ $ git clone https://github.com/phacility/libphutil.git
+      somewhere/ $ git clone https://github.com/phacility/arcanist.git
+  
+  把 `arc` 添加到环境变量：
+  
+      $ export PATH="$PATH:/somewhere/arcanist/bin/"
+      
+  ## 配置你的项目
+  在你的项目目录创建 `.arcconfig` 文件：
+  
+      $ cd yourproject/
+      yourproject/ $ $EDITOR .arcconfig
+      yourproject/ $ cat .arcconfig
+      {
+        "phabricator.uri" : "https://phabricator.example.com/"
+      }
+      
+  把 `phabricator.uri` 设定为你 Phabricator 安装的地址 ( `arc` 会把改动的部分发送到该地址 ).
+  > 注意：这个配置文件需要被 `commit` 到你的代码库(repository).
+  
+  ## 安装 Arcanist Credentials
+  
+  你需要 Credentials 进行授权，在这之前你需要一个 Phabricator 账号。
+  
+      $ cd yourproject/
+      project/ $ arc install-certificate
+      ...
+    
+    按照提示，可以把你的本地机器的账号连接到 Phabricator 账号。
+    
+  ## 提交修改部分等待 Review
+  
+      $ $EDITOR file.c
+      $ arc diff
+'''
+tags: []
+isStarred: false
+isTrashed: false

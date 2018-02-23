@@ -1,0 +1,102 @@
+createdAt: "2018-02-16T23:52:59.767Z"
+updatedAt: "2018-02-21T22:46:49.387Z"
+type: "MARKDOWN_NOTE"
+folder: "9cecadbb6177e0805c62"
+title: "(R) Statistics Review"
+content: '''
+  # (R) Statistics Review
+  
+  ## Summary
+  
+  **Measures of Central Tendency**:
+  - Arithmetic Mean
+    - Measure of Central Location
+    - Describes a Singele Data Set
+    - Interval Data
+  - Geometric Mean
+    - Describes a Single Data Set
+    - Interval Data (specifically for growth rates & exponential-type data)
+    - Requires Non-Negative Data
+  - Median
+    - Measure of Central Location
+    - Describes a Single Data Set
+    - Interval or Ordinal
+  - Mode
+    - Describes a Single Data Set
+    - Interval, Ordinal or Nominal
+  
+  
+  **Measures of Spread**
+  - Range
+  - Variance
+  - Quantiles/ Quartiles/ Percentiles
+  
+  **Relative Measures of data**
+  - Mean
+  - Standard Deviation
+  - Variance
+  - Coefficient of Variation
+  
+  **Absolute Measures of Data**
+  - Median
+  - Range
+  - Min / Max
+  - Interquartile Range
+  
+  ## Rnage
+  
+  The difference between the largest and smallest observations
+  
+  ## Variance
+  
+  The most common measure of the spread of the data points within a data set is variance ($s^2$)
+  
+   - Formula
+      $$s^2 = \\frac{(x_1 - \\overline{x})^2 + (x_2 - \\overline{x})^2+\\ldots+ (x_n - \\overline{x})^2 }{n -1} = \\frac{\\sum_{i = 1}^{n}(x_i - \\overline{x})^2}{n-1}$$
+  
+  ## Standard Deviation
+  
+  Often times, instead of variance, the standard deviation is cited, which is simply the square root of variance
+  
+   - Formula
+      $$s = \\sqrt{\\frac{(x_1 - \\overline{x})^2 + (x_2 - \\overline{x})^2+\\ldots+ (x_n - \\overline{x})^2 }{n -1}} = \\sqrt{\\frac{\\sum_{i = 1}^{n}(x_i - \\overline{x})^2}{n-1}}$$
+      
+  ## Coefficient of Variation
+  
+  The coefficient of variation of a et of obervations is the standard deviation of the observations divided by their mean:
+  
+  - Formula
+      $$cv = \\frac{s}{\\overline{x}}$$
+      
+  ## Percentiles
+  
+  The $P$ th percentile is the value for which $P\\%$ are less than that value and $(100 - p)\\%$ are greater than that value
+  
+  - Step 1: find location of $p^{th}$ percentile using formula:
+      $$L_p = (n + 1)\\frac{P}{100} = x.y$$
+  - $L_p$ tells us two things:
+    - the $location$ of the $p^{th}$ percentile is between the $x^{th}$ and the $(x+1)^{th}$ observation
+    - the $p^{th}$ percentile is exactly $(0.y \\times 100  )\\%$ of the distance between the $x^{th}$ and $(x + 1)^{th}$ observation
+  
+  - Step 2: Compute the exact location of $p^{th}$ percentile:
+      $p^{th} percentile = x_{obs}^{th} + [(x + 1)_{obs}^{th} - x_{obs}^{th}] \\times (0.y)$
+  
+  ## Quartiles
+  
+  ### Quartiles & Interquartile Range
+  
+  - The Range (maximum value minus the minimum value) develops a sense of the spread of the data
+  - The **Interquartile Range (IQR)** is $Q_3 - Q_1$ 
+  - **Important Observation**
+    - Quartiles (and by association) the median divide a data set according the number of data points **and not** the values associated with each of those data points
+  
+  ## Box Plot
+  
+  [Wiki](https://zh.wikipedia.org/wiki/%E7%AE%B1%E5%BD%A2%E5%9C%96)
+  
+  > **[Note]** If certain data exceed the 1st or 3rd quartile by more than *1.5\\*IQR* in either direction, they are considered outliers and are represented in a box plot as points 
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

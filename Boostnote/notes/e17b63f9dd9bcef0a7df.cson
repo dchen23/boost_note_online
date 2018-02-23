@@ -4,10 +4,88 @@ title: "Project 03"
 content: '''
   # Project 03
   
+  ## Requirements
+  ### Debugging with GDB
+  
+  For this part of the project, you need to demonstrate that you can effective use gdb or cgdb to debug the xv6 kernel.
+  
+  During interactive grading you will need to show to set a breakpoint in piperead(), then execute the following command in the xv6 shell:
+  $ echo hello world | wc
+  
+  In gdb (or cgdb) you should be able to show that the string "hello world" is in the pipe buffer.
+  
+  ### Porting usfgrep and usfsh to xv6
+  
+  For this problem you need to port your implementation of usfgrep and usfsh to xv6.
+  
+  You will need to do a few things to get this to work:
+    - Get usfgrep and usfsh working if they are broken for any reason 
+    - Port usfgrep and usfsh so that it uses xv6 system calls and library calls (look at the existed xv6 user programs as a guide)
+    - Figure out how to add a new user program to the xv6 filesystem (you will have to modify the Makefile to get this to work)
+  
+  Once added, you need to demonstrate that usfsort works in xv6:
+  
+  $ cat > hello.txt
+  world
+  hello
+  ^D
+  $ usfgrep hello hello.txt
+  hello.txt[2] hello
+  $
+  
+  ### Adding a New System Call to xv6
+  
+  For this problem you need to add a new system call to the xv6 kernel and write a new xv6 user program to demonstrate that it works.
+  
+  The system call you are going to add is called 
+  
+  int pipe_count(int fd)
+  
+  This system call will return the number of bytes currently in a pipe pointed to by fd. The fd value can be either the read end or the write end of the pipe.
+  
+  In addition, if fd is not a valid pipe, you need to return -1.
+  
+  Write a new user program, pipetest, that tests your pipe_count() system call.
+  
+  Your test should invoke pipe_count() in the following situations:
+    - The pipe is empty
+    - The pipe is full
+    - The pipe is in between empty and full
+    - The fd is not a valid pipe
+  
+  ### Scheduler Tracing
+  
+  For this part of the project you need to add the ability to trace the scheduling decisions made by the xv6 schedule.
+  
+  You will add two new system calls:
+  
+  trace_start(void);
+  
+  trace_end(fd);
+  The trace_start() system call will turn on tracing and the trace_end() system call will stop tracing and write the trace log to the file represented by fd. This could be stdout (1) or it could be a file previously opened.
+  
+  The contents of the trace log output should be:
+  
+  (ticks) proc_name
+  
+  Where each entry represents the tick count and the proc_name of a chose process. In this way we can see a log of the scheduling decisions.
+  
+  Tests:
+  
+  Driver and two processes a and b.
+  Driver and three processes a, b, and c.
+  
+  
+  ## InterActive Grading
+  
+  - [x] show to set a breakpoint in piperead()
+  - [x] porting usfgrep and usfsh to xv6
+  - [x] adding a new system call to xv6
+  
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-10-26T00:50:55.207Z"
-updatedAt: "2017-10-30T07:42:41.877Z"
+updatedAt: "2017-11-21T23:13:41.733Z"
 isPinned: true

@@ -1,0 +1,15 @@
+createdAt: "2018-02-03T01:38:18.774Z"
+updatedAt: "2018-02-03T01:39:18.621Z"
+type: "MARKDOWN_NOTE"
+folder: "99586c29829f63f12112"
+title: "浏览源码工具"
+content: '''
+  # 浏览源码工具
+  
+  1. Source Insight (windows)
+  2. Vim + Cscope
+  3. LXR (Linux Cross Reference)
+'''
+tags: []
+isStarred: false
+isTrashed: false

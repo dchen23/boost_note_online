@@ -12,7 +12,7 @@ content: '''
   - [ ] 4
   
   ## Inline Equation (LaTeX)
-  I don't know $$E=mc^2$$.
+  I don't know $E=mc^2$.
   
   ## Equation ([MathJax](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference))
   $$\\sum_{i=1}^n a_i=0$$
@@ -160,4 +160,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-22T06:29:51.083Z"
-updatedAt: "2017-10-05T02:55:13.579Z"
+updatedAt: "2018-02-15T07:07:31.302Z"

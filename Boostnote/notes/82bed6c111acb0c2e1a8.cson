@@ -4,6 +4,8 @@ title: "Career List"
 content: '''
   # Career List
   
+  ### IT
+  
   - [ ] Indeed (dream)
   - [ ] twitter
   - [ ] Tableau
@@ -12,9 +14,9 @@ content: '''
   - [ ] **Adobe**
   - [ ] Redfin
   - [ ] Opendoor
-  - [ ] **Yahoo! (dream)**
+  - [x] **Yahoo! (dream)**
   - [ ] juying
-  - [ ] Flag
+  - [x] Flag
   - [ ] Acuna
   - [ ] zen desk
   - [ ] docker
@@ -38,10 +40,19 @@ content: '''
   - [ ] Databricks
   - [ ] big four
   - [ ] dropbox
+  - [ ] swiftype
+  
+  ----
+  
+  ### Quant
+  
+  - [ ] Akuna
+  - [ ] Virtu Financial Inc
+  - [ ] Optiver
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-10-14T09:37:32.522Z"
-updatedAt: "2017-11-02T05:02:34.032Z"
+updatedAt: "2017-11-17T01:14:27.631Z"
 isPinned: true

@@ -1,0 +1,50 @@
+createdAt: "2018-02-11T06:05:29.499Z"
+updatedAt: "2018-02-12T22:54:34.308Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "Rokid 专用操作"
+content: '''
+  # Rokid 专用操作
+  
+  ## 代码提交
+  
+  如果不使用 Phabricator 的 Review 系统 Differential, 那么提交代码的操作和普通 Git 系统一样。
+  
+  如果要使用 Differential 来 review 代码，需要如下操作：
+  
+  首先配置 Arcanist 命令行工具，参阅 [Arcanist 快速上手](), [Arcanist 用户指南]()
+  
+  然后在命令行运行：
+  
+      git add .
+      git commit -m "whatyouwanttosay"
+      arc diff
+    
+  按照提示在文档中填写相应的内容，然后键入：
+  
+      arc land
+      
+  
+  ## 代码迁移
+  
+  首先，在 Phabricator 系统的 Diffusion 点击 New Repository, 选择 Create a New Hosted Repository, 类型选择 Git, 然后输入项目相关信息
+  
+  然后，删除原先的远程分支，在 Phabricator 上找到项目的 Clone(SSH) 或者 Clone(HTTP)  链接：
+  
+      $ git remote rm origin
+      $ git remote add origin 'git@yourprojectlink.git'
+  
+  这时候你没有 master 分支，所以首先要创建一个：
+      
+      $ git commit --allow-empty -m "initial commit"
+      $ git push -u origin master
+      
+  如果你使用了 Clone(HTTP), 需要输入用户名和密码。如果你使用了 Clone(SSH), 这时候会提示你 `Permission denied (publickey, keyboard-interactive)`, 这是因为你没有那 public_key 上传到 Phabricator。 点击首页的设置图标，选择 SSH Public Keys 选项栏， 点击 Upload Public Key 按钮，选个名儿，然后将命令行运行 ` cat ~/.ssh/id_rsa.pub` 得到的内容复制到 Public Key 内容框中。如果 `cat ~/.ssh/id_rsa.pub` 之后提示木有，不要方，按如下方式生成：
+      
+      $ ssh-keygen -t rsa
+      
+  然后一路回车，生成成功。
+'''
+tags: []
+isStarred: false
+isTrashed: false

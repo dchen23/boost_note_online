@@ -1,0 +1,62 @@
+type: "MARKDOWN_NOTE"
+folder: "2824f3e225f36c2e7962"
+title: "Project 04"
+content: '''
+  # Project 04
+  
+  ### Processes
+  - namespace
+  - scheduling
+  - max # processes
+  - max amount memory
+  
+  ### File System
+  - container directory
+  - file system size limit
+  
+  ### Deliverables I
+  
+  #### Process accounting
+  /c1:
+  sh
+  ps
+  cat
+  echo
+  df
+  free
+  ctool stratv vc0 c1
+  ctool stop pid
+  
+  #### Scheduling:
+  - lottery scheduling
+  - stride scheduling
+  - VTRR
+  - Multiprocess fair scheduling
+  
+  #### Resource limit tests
+  
+  #### Bombs
+  - process bomb
+  - memory bomb
+  - disk bomb
+  
+  ---
+  FAQ
+  - size of dir
+    - `ctool cstart vc c1 procs men dist firstProg [argv]`
+    - `cid = cstart(vc, cname, procs, disk, size)`
+    - `id = cfork(cid)`
+  - used memory
+  - isolating proc table
+  - container path
+  - inodes
+  - scheduling
+  
+  --- 
+  - `ctool cinfo`
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-16T23:11:08.536Z"
+updatedAt: "2017-12-05T21:30:59.078Z"

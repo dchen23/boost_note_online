@@ -16,10 +16,10 @@ content: '''
   
   In either case, the OS can be highly modular.
   
-  ![monolithic kenerl vs microkernel]()
+  ![monolithic kenerl vs microkernel](https://raw.githubusercontent.com/dchen23/boost_note_online/master/Images/os-kernel.png)
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-02T06:34:14.956Z"
-updatedAt: "2017-11-02T07:02:40.359Z"
+updatedAt: "2017-11-02T07:04:59.367Z"

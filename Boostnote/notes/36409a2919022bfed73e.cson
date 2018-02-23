@@ -1,0 +1,74 @@
+createdAt: "2018-02-06T03:07:58.058Z"
+updatedAt: "2018-02-08T00:56:45.603Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "Arcanist 配置: Windows 环境指南"
+content: '''
+  # Arcanist 配置: Windows 环境指南
+  
+  Arcanist 可以通过 `cmd.exe` 或者 Git Bash 在Windows 环境中运行。但是需要花一点功夫才能配置好，请按照这篇文件一步步来。
+  
+  > Windows 的支持还处于待完善状态，可能会遇到一些文件 bug
+  
+  ## 需要的部件
+  你需要安装：
+  - Arcanist, 参考 [Arcanist 用户指南]()
+  - PHP (见文章最后的PHP安装指南)
+  - SVN, Git 或者 Mercurial
+  
+  完成之后，你需要配置：
+  - 将 `arcanist/bin`, `PHP` 目录和你的 VCS 工具添加到环境变量中。添加之后，你在终端输入 `php`, `arc`, `git`(如果你的 VCS 工具选用了 git) 命令后，都应该出现相应的指示。
+  - 你的 `EDITOR` 环境变量应该指向一款可以在终端使用的编辑器，例如捏可以使用 `vim`. 你可以在 `arc` 中进行设置，下文中会介绍细节。
+  
+  点击控制面板的 `System`, 在 `Advanced` tab 中可以设置环境变量。
+  
+  ## 设置终端编辑器
+  
+  > **别用**记事本，那个是搞笑的
+  
+  一些 arc workflow 会强制你使用文本编辑器编辑大段文本。你可以选择你的喜欢的文本编辑器来做处理，这里列举一些与 arc 适配的编辑器：
+  - Notepad++, 需要添加环境变量（在安装时可以选择）
+  - **vim**, 推荐使用，Git Bash 中自带
+  - GitPad, 没试过，要不你试试？
+  
+  在 arc 中配置编辑器，可以通过设置 `EDITOR` 环境变量，或者运行下面的命令：
+  
+      $ arc set-config editor "\\"C:\\path\\to\\some\\editor.exe\\""
+      
+  > 在进行 `arc set-config` 命令时，路径中的空格必须被包含在双引号中，并且路径中的引号需要进行转义。
+  
+  如果你的编辑器都安装在默认地址，你可以执行下列命令来配置：
+  
+    **Notepad++**
+  
+      $ arc set-config editor "\\"C:\\Program Files (x86)\\Notepad++\\notepad++.exe\\" -multiInst -nosession"
+  
+  **vim**
+  
+      $ arc set-config editor "\\"C:\\Program Files (x86)\\Git\\share\\vim\\vim73\\vim.exe\\""
+      
+  **GitPad**
+  
+      $ arc set-config editor "\\"C:\\Users\\yourusername\\AppData\\Roaming\\GitPad\\GitPad.exe\\""
+      
+  **Sublime Text**
+  
+      $ arc set-config editor "\\"C:\\Program Files\\Sublime Text 2\\sublime_text.exe\\" -w -n"
+      
+  ## PHP 安装指南
+  
+  许多 PHP 版本都能适配 arc 软件，如果你遇到了问题，或者担心会遇到问题，请按照指示来做：
+  
+  - 下载最近的 PHP 二进制文件 http://windows.php.net/download/, 最新的 PHP 版本应该是兼容软件的，可以选在 No Thread Safe 的版本（Thread safe 应该也能兼容，如果你不信玄学的话）
+  - 解压下载的 zip 包
+  - 将 `php.ini-development` 文件更名为 `php.ini`
+  - 打开 `php.ini` 文件，定位到 `;extension=php_curl.dll` 这行，将最前面的 `;` 移除。定位到 `; extension_dir = "ext"` 这行，并改成 `extension_dir = "C:\\PHP\\ext"`, 这里 `C:\\PHP` 是我们安装 PHP 的目录
+  - 你可以通过在终端中敲入 `php -i` 来验证你的安装，配置成功的话，你可以在输出中找到 `curl` 的字段
+  
+  ## 下一步
+  
+  继续完成配置 [Arcanist 用户指南]()
+'''
+tags: []
+isStarred: false
+isTrashed: false

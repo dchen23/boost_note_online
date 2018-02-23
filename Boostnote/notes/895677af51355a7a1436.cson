@@ -1,0 +1,49 @@
+createdAt: "2018-02-15T07:03:16.214Z"
+updatedAt: "2018-02-16T23:49:49.451Z"
+type: "MARKDOWN_NOTE"
+folder: "9cecadbb6177e0805c62"
+title: "Simple Linear Regression"
+content: '''
+  # Simple Linear Regression
+  
+  ## Why Simple? Why Linear? Why Regression?
+  
+  - __Simple__: only dealing with two variables, an explanatory $(X)$ and a reponse variable $(Y)$
+  - **Linear**: attempting to quantify a linear relationship, as opposed to a non-linear (curvilunear) relationship
+  - **Regression**: method of analysis developed by Sir Francis Galton in the late 1800s
+  
+  ## Basic Concepts
+  
+  - A regression model is a formal means of expressing the two essential ingredients of a statistical relation:
+    - A tendency of the response variablle $Y$ to vary with the predictor variable $X$ in a systematic fashion
+    - A scattering of points around the curve of the statical relatinship
+  
+  ## Defining the SLR Model
+  
+  - Two variables: the explanatory variable, $X$, explains, in part or wholly, the response variable $Y$.
+  - You may encounter other terminology when referring to explanatory and/or reponse variables:
+      |    $Y$    | $X$ |
+      | ---------- | --- |
+      | Dependent variable |  Independent variable |
+      | Explained variable | Explanatory variable |
+      | Reponse variable | Control variable |
+      | Predicted variable | Predictor variable |
+      | Regressand | Regressor variable |
+      
+  - The graph of the regression function is called the regression line (or curve)
+  - The equation that accounts for statistical inexactitude of the relationship in a regression model is as follow:
+      $$Y_i = \\beta_0 + \\beta_1 X_i + \\varepsilon_i $$
+      
+  - $\\varepsilon$ is a random error term with:
+    - $E[\\varepsilon | X_i ] = 0 $ (exogeneity)
+    - $V[\\varepsilon | X_i] = \\sigma^2\\quad \\forall\\quad i$ (constant variance or homoscedasticity)
+    - $\\sigma[\\varepsilon_i,  \\varepsilon_j| X_i] = 0 \\quad \\forall \\quad i,j;i \\neq j$ (no serial correlation)
+    - $\\sigma[X_i, \\varepsilon_i] = 0 \\quad \\forall \\quad i$ (endogeneity)
+  
+  ## Defining the Ordinary Least Square Estimates
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

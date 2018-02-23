@@ -1,0 +1,13 @@
+type: "MARKDOWN_NOTE"
+folder: "4ff331626e7937f1a87a"
+title: "mvn install:install-file -Dfile=/Users/dchen/Downloads/ExpressionImplDependencies-1.0-SNAPSHOT.jar -DgroupId=com.snaplogic -DartifactId=ExpressionImplDependencies -Dversion=1.0-SNAPSHOT -Dpackaging=jar -DgenereatePom=true"
+content: '''
+  `mvn install:install-file -Dfile=/Users/dchen/Downloads/ExpressionImplDependencies-1.0-SNAPSHOT.jar -DgroupId=com.snaplogic -DartifactId=ExpressionImplDependencies -Dversion=1.0-SNAPSHOT -Dpackaging=jar -DgenereatePom=true`
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-20T23:36:36.946Z"
+updatedAt: "2017-11-20T23:36:57.540Z"

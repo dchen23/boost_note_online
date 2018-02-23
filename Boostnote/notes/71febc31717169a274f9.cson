@@ -1,0 +1,71 @@
+createdAt: "2018-02-21T09:04:45.040Z"
+updatedAt: "2018-02-21T11:29:38.893Z"
+type: "MARKDOWN_NOTE"
+folder: "9cecadbb6177e0805c62"
+title: "(R) Measures of Linear Relationship"
+content: '''
+  #(R) Measures of Linear Relationship
+  
+  ## Three numerical measures of  *linear* relationship that provide this infomation
+  
+  - Convariance
+  - Coefficient of Correlation
+  - Coefficient of Determination
+  
+  ## Convariance
+  
+  A measure of how two data sets linearly vary with respect to each other
+  
+  $$s_{xy} = \\frac{\\sum_{i = 1}^n(x_i - \\overline{x})(y_i - \\overline{y})}{n - 1}$$
+  $$s_{xy} = \\frac {1}{n-1} [\\sum_{i=1}^nx_iy_i - \\frac{\\sum_{i=1}^nx_i \\sum_{i=1}^n y_i}{n}]$$
+  
+  [Wiki](https://zh.wikipedia.org/wiki/%E5%8D%8F%E6%96%B9%E5%B7%AE)
+  
+  ## Coefficient of Correlation
+  
+  - Formula
+      $$r = \\frac{1}{n -1}\\sum_{i=1}^n\\frac{(x_i - \\overline{x})}{s_x} \\frac{(y_i - \\overline{y})}{s_y} = \\frac{s_{xy}}{s_xs_y}$$
+      
+      - where:
+        - $r = \\text{correlation}$
+        - $n = \\text{number of data points in data set}$
+        - $\\overline{x}, \\overline{y} = \\text{mean of variables } x \\text{ and } y$
+        - $s_x, s_y = \\text{standard deviation of variables } x \\text{ and } y$
+          - **recall:** $s_x = \\sqrt{\\frac{(x_1 - \\overline{x})^2 + (x_2-\\overline{x})^2+\\ldots + (x_n - \\overline{x})^2}{n-1}}$
+  
+  - $-1 \\leq r \\leq +1$
+    - $r = +1$ -> perfect postive linear relationship
+    - $r = -1$ -> perfect negative linear relationship
+    - $r = 0$ -> no linear relationship between variables
+  
+  - As the standard deviation (and by association the variance) of the data points (scatter) is reduced, the correlation increases in strength
+  
+  - Correlations are calculated using means 
+  - and standard deviations, both of which are sensitive to outliers, therefore by association, the correlation is also sensitive to outliers
+  - Correlation describes **only linear relationships**
+  
+  ## Notational Summary
+  
+  |        | Variable |
+  | ---------- | --- |
+  | Size |  $n$ |
+  | Mean | $\\overline{x}$ |
+  | Variance | $s^2$ |
+  | Standard Deviation | s |
+  | Coefficient of Variation | $cv$ 
+  | Covariance | $s_{xy}$ |
+  | Coefficient of Correlation | $r$ |
+  | Coefficient of Determination | $r^2$ |
+  
+  ## Summary Classification of Measures
+  
+  |    Relative Mesaures of Data   | Absolute Measures of Data | Measures of Linear Relationships | 
+  | ---------- | --- | --- |
+  | Mean |  Median | Covariance |
+  | Standard Deviation | Range | Coefficient of Correlation |
+  | Variance | Min / Max | Coefficient of Determination |
+  | Coefficient of Variation | Interquartile Range | Linear Regression Equation |
+'''
+tags: []
+isStarred: false
+isTrashed: false

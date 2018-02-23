@@ -1,0 +1,19 @@
+createdAt: "2018-02-15T07:20:43.048Z"
+updatedAt: "2018-02-15T07:25:13.562Z"
+type: "MARKDOWN_NOTE"
+folder: "9cecadbb6177e0805c62"
+title: "Analysis Methods"
+content: '''
+  # Analysis Methods
+  
+  ## Analyze individual variables
+  - **Numerically**: mean, median, mode, variance, quantiles, skewness, kurtosis, etc.
+  - **Graphically**: histograms, box plots, etc.
+  
+  ## Analyze relationship(s) between variables
+  - **Numerically**: covariance, correlation
+  - **Graphically**: scatter plots
+'''
+tags: []
+isStarred: false
+isTrashed: false

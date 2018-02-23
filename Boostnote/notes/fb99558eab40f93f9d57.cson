@@ -1,0 +1,40 @@
+createdAt: "2018-02-15T06:46:00.470Z"
+updatedAt: "2018-02-15T07:02:48.193Z"
+type: "MARKDOWN_NOTE"
+folder: "9cecadbb6177e0805c62"
+title: "Introduction to Statistic Learning"
+content: '''
+  # Introduction to Statistic Learning
+  
+  ## Prediction vs Inference
+  
+  - Prediction
+    - black box
+  - Inference
+    - not black box
+  
+  ## Parametric vs Non-Parametric
+  
+  - Parametric
+    - Two-step approach
+      1. making an assumption 
+      2. using training data to train or fit the model
+    - less onerous
+    - maybe poor representation
+  - Non-Parametric
+    - require a very large number of observations
+  
+  ## Interpretability vs Flexibility
+  
+  ## Supervised vs Unsupervised Learning
+  
+  - Supervised
+    - Data where each observation of the predictor variables is associated with a response variable
+    - e.g., linear regression, logistic regression, GAMs, boosting, SVM, etc.
+  - Unsupervised
+    - Data where each observation of the predictor variables is **not** associated with a response variable
+    - e.g., cluster analysis
+'''
+tags: []
+isStarred: false
+isTrashed: false

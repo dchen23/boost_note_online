@@ -4,10 +4,13 @@ title: "Hadoop The Definitive Guide 4th"
 content: '''
   # Hadoop The Definitive Guide 4th
   
+  > The number of reduce task is not governed by the size of the input, but is sepecified independently.
+  > When there are multiple reducers, the map tasks **partition** their output, each creating one partition for each reduce task.
   
+  > 
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-02T06:33:08.172Z"
-updatedAt: "2017-11-02T06:33:38.875Z"
+updatedAt: "2017-11-04T06:08:58.314Z"

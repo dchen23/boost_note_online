@@ -1,0 +1,24 @@
+createdAt: "2018-01-24T23:31:29.363Z"
+updatedAt: "2018-02-07T20:49:42.883Z"
+type: "MARKDOWN_NOTE"
+folder: "99586c29829f63f12112"
+title: "Android 源码编译环境搭建"
+content: '''
+  # Android 源码编译环境搭建
+  
+  ubuntu >= 15.04
+  `sudo apt-get update`
+  `sudo apt-get install openjdk-8-jdk`
+  
+  您将需要 64 位版本的 Ubuntu。建议您使用 Ubuntu 14.04。
+  `sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip`
+  
+  > 使用`bash`， 其他终端可能会有问题。
+  
+  >使用Ubuntu 14.04 或者 16.04， 因为我们的源码需要openjdk7, 在17.10的ppa库中没有release。
+  
+  >**note**: ubuntu的版本尽量用 xx.04 的版本，因为很多开源库和软件只提供 LTS 版本的release包。
+'''
+tags: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,30 @@
+createdAt: "2018-02-05T23:04:38.185Z"
+updatedAt: "2018-02-12T04:40:02.186Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "Phabricator 简介"
+content: '''
+  # Phabricator 简介
+  
+  ## Phabricator 是啥？
+  
+  Phabricator 由一系列主要工具集组成：
+  - **Differential**, code review 工具
+  - **Diffusion**, 代码仓库
+  - **Maniphest**, Bug 追踪器
+  - **Phriction**, Wiki 系统
+  - **Arcanist**, 命令行交互工具
+  
+  ## 特性
+  
+  - 支持 git, svn 和 Mercurial
+  - 易扩展
+  - PHP实现
+  
+  ## Phabricator 升级
+  
+  [Upgrading Phabricator](https://secure.phabricator.com/book/phabricator/article/upgrading/)
+'''
+tags: []
+isStarred: false
+isTrashed: false

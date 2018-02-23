@@ -1,0 +1,68 @@
+createdAt: "2018-02-21T22:46:00.797Z"
+updatedAt: "2018-02-22T01:12:44.540Z"
+type: "MARKDOWN_NOTE"
+folder: "9cecadbb6177e0805c62"
+title: "(R) Continuous Probabilty Distributions"
+content: '''
+  # (R) Continuous Probabilty Distributions
+  
+  ## Probability Density Fuctions (Uniform Distribution)
+  
+  ### Continous Random Variables
+  
+  - if a random variable can take on any real-numbered value (e.g., $\\pi, \\sqrt{2}$ ), we define that random variable to be **continous**
+  - We are not able to represent the probability distribution of the random variable $X$ with a [*probability mass function (pmf)*](https://zh.wikipedia.org/zh-hans/%E6%A6%82%E7%8E%87%E8%B4%A8%E9%87%8F%E5%87%BD%E6%95%B0) because its possible values are infinite; instead we will define a **probability density function (pdf)** such that **areas and not heights** repesent probabilities
+  - The cumulative counterpart to the *pdf* remains the **cumulative distrubution function (cdf)**
+  
+  ### Area Under a Continous Distribution
+  
+  - The area under a probability density function **is equal to one**, which we intuitively understand to be the maximal value a probability can take
+  
+  ### Uniform Distribution
+  
+  - A uniform distribution - as its name implies - assigns equal probability to every possible value over which the distribution spans
+  - A very nie property about the Uniform Distribution is that it is always reactangular in shape, and computing the area of a rectangle is trivial
+  
+  > For **all** continuous distributions, the probability of a random variable $X$ being equal to a single value is always equal to 0
+  
+  
+  ## Normal Distribution
+  
+  ### Characteristics
+  
+  - Symmetric about the mean
+  - Infinitely long tails
+  - Can be **wholly described using only two parameters, mean and variance**
+  
+  ### Parameters
+  
+  - Whereas the mean dictates where the center of the distribution lies, the variance dictates the spread and ultimately shape of the curve (narrow versus broad)
+  
+  ### Sigma Relationship
+  
+  - A very unique and defining feature of the normal distribution is the relationship with the standard deviation ($\\sigma$)
+  - Moving from the mean (or center because the normal distribution is symmetric), if we compute the area under the curve at a distance of one sigma in **each** direction, we will have captured 68% of the area, regardless of the values of the mean ($\\mu$) and the variance ($\\sigma^2$)
+  - At a distance of two and three sigma, the area under the curve increases to 95% and 99.7% respectively
+  
+  ### Standardizing the Normal Distribution
+  
+  - Recall that all Normal distributions share identical characteristics: inﬁnite tails, centered and symmetric about the mean
+  - Leveraging these characteristics, we can transform any Normal distribution into a common, standard version
+  
+  ### How to Standardize
+  1. Subtract the mean ($\\mu$) to shift the distribution such that it is centered about zero
+  2. Divide by the standard deviation ($\\sigma$) to standardize the shape of the curve
+      $$given \\ \\  X \\sim N(\\mu,\\sigma^2)$$
+      $$we\\ can\\ get:\\ Z = \\frac{X - \\mu}{\\sigma} \\sim N(0, 1)$$
+      
+      - $Z$ represents the standardized version of the random variable $X$
+      - $Z$ has a mean $\\mu = 0$ and a variance $\\sigma^2 = 1$
+  
+  ### Z-table
+  
+  [Website](http://www.z-table.com/)
+  > see ppt
+'''
+tags: []
+isStarred: false
+isTrashed: false

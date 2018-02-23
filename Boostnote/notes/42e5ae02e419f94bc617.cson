@@ -1,0 +1,29 @@
+createdAt: "2018-02-06T03:08:39.817Z"
+updatedAt: "2018-02-08T00:56:54.171Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "Arcanist 配置: Mac OS X 环境指南"
+content: '''
+  # Arcanist 配置: Mac OS X 环境指南
+  
+  ## 需要的部件
+  
+  你需要安装：
+  - PHP, 一般系统自带
+  - Arcanist, 参见 [Arcanist 用户指南]()
+  - SVN, Git, 或者 Mercurial ( 我们需要 Git ).
+  
+  接下来，需要配置：
+  - 将 `arcanist/bin`, `php` 和 VCS 工具 (`svn`, `git`, `hg`) 加入到环境变量 `PATH` . 在终端输入 `php` `arc` 和 `git`，应该都会显示一些指示。
+  - 安装终端文档编辑器，`nano`, `vim`, `emacs` 等。
+  
+  编辑 `~/.profile` 添加环境变量( 对于 `zsh`, 编辑`~/.zshrc`)
+  
+  ## 下一步
+  
+  继续剩下的部分：
+  [Arcanist 用户指南]()
+'''
+tags: []
+isStarred: false
+isTrashed: false

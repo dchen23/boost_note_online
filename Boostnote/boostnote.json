@@ -54,6 +54,46 @@
       "key": "770b506064e20e1eb4bf",
       "color": "#3FD941",
       "name": "Big Data"
+    },
+    {
+      "key": "563c2d8de19b4ff7a694",
+      "color": "#B013A4",
+      "name": "购物清单"
+    },
+    {
+      "key": "2affe4655e0308a78bb4",
+      "color": "#FF8E00",
+      "name": "TODO"
+    },
+    {
+      "key": "5c96f0840146633d247b",
+      "color": "#B013A4",
+      "name": "Docker"
+    },
+    {
+      "key": "99586c29829f63f12112",
+      "color": "#3FD941",
+      "name": "Kernel Development"
+    },
+    {
+      "key": "3246ddbd6f8814128f2f",
+      "color": "#2BA5F7",
+      "name": "Phabricator 手册"
+    },
+    {
+      "key": "02e549ed193e292be35f",
+      "color": "#30D5C8",
+      "name": "DevOps"
+    },
+    {
+      "key": "9cecadbb6177e0805c62",
+      "color": "#3FD941",
+      "name": "Statistic Learning"
+    },
+    {
+      "key": "06d7e86e5560676f3524",
+      "color": "#FF8E00",
+      "name": "概率论与数理统计"
     }
   ],
   "version": "1.0"

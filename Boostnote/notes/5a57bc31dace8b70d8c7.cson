@@ -1,0 +1,83 @@
+createdAt: "2018-01-26T23:13:19.863Z"
+updatedAt: "2018-01-31T19:33:30.929Z"
+type: "MARKDOWN_NOTE"
+folder: "bb3caf38d1d27e988c0b"
+title: "Android 和 Linux 的关系"
+content: '''
+  ### Android 和 Linux 的关系
+  - Android 内核是由标准的 Linux 内核修改而来的， Linux 内核的版权是 GPL ，在此版本下，硬件厂商需要开源自己的驱动代码，这是他们不能接受的，Google 为了推广 Android 系统，将驱动程序移到 "userspace" 里面，同时在 Kernel 上开小门，让原本不能控制硬件的 "userspace" 程序可以碰到。相当于在 Kernel 和应用程序之间设计了一层中间层， 既可以不违反 GPL 协议，又能让厂商在不开源驱动代码的前提下控制硬件。
+  - Android 修改了 Liinux 的内核，但是不提供修改的细节， 相当于自己搞了一个封闭的系统， 所以被移除出 Linux 的分支。
+  
+  ### Android 和 Linux 内核的区别
+  - 每个 Android 应用都运行在自己的进程上，享用 Dalvik 虚拟机为它分配的专有实例。
+  - Davlik 执行 (.dex) 的可执行文件。该格式文件经过优化，将内存消耗降到最小。Java 编译器将源代码转为 (.class) 文件, (.class) 文件被内置的 dx 工具转为 (.dex) 文件，最终在 Dalvik 虚拟机上运行。
+  - Android 应用程序都是运行在 Dalvik 上的 Java 程序， 而 Dalvik 是运行在 Linux 中的，在一些底层用功能——例如线程和低内存管理， Dalvik 是依赖 Linux 内核的。
+  
+  ### Android 与 Linux 的主要差别
+  1. Android Binder 是基于 OpenBinder 框架的一个驱动，用于提供 Android 平台的进程间通信 (IPC, Inter-Process Communication)。原来的 Linux 系统上层应用的进程间通信主要是 D-Bus(Desktop Bus), 采用消息总线的方式进行 IPC。 
+    主要源码位于：
+      ```
+      drivers/staging/android/binder.c
+      ```
+  2. Android 电源管理 (PM) 是一个基于标准 Linux 电池管理系统的轻量级 Android 电池管理驱动，针对嵌入式设备做了很多优化。利用锁和定时器来切换系统状态，控制设备在不同状态下的功耗。
+    源代码分布于：
+     ```
+     kernel/power/earlysuspend.c
+     kernel/power/consoleearlysuspend.c
+     kernel/power/fbearlysuspend.c
+     kernel/power/wakelock.c
+     kernel/power/userwakelock.c
+     ```
+  3. Android 中的低内存管理 (Low Memory Killer) 和 Linux 标准的 OOM(Out Of Memory) 相比，其机制更加灵活，可以根据需要杀死进程来释放需要的内存。Lower Memory Killer 的关键函数是 lowmem_shrinker(), 作为一个模块在初始化时调用 register_shrinke 注册一个 lowmem_shrinker, 它会在 VM 内存紧张的情况下调用。lowmen_shrinker  完成具体操作。简单的说就是寻找一个最合适的进程杀死，从而释放它占用的内存。
+      源码位于：
+      ```
+      drivers/staging/android/lowmemorykiller.c
+      ```
+  4. 匿名共享内存 (Ashmem) 为进程间提供大块共享内存，同时为内核提供回收和管理这个的内存的机制。如果一个程序尝试访问 Kernel 释放的一个内存块，它将会收到一个错误提示，然后重新分配内存并重载数据。
+      源码位于：
+      ```
+      mm/ashmem.c
+      ```
+  5. Android PMEM (phsyical) 用于向用户空间提供联系的物理内存区域，DSP 和某些设备只能工作在连续的物理内存上。驱动中提供了 mmap, open, release, ioctl 等接口
+      起源码位于：
+      ```
+      drivers/misc/pmem.c
+      ```
+  6. Android Logger 是一个轻量级的日志设备，用于抓取 Android 系统的各种日志，是 Linux 所没有的。
+      其源码位于：
+      ``` 
+      drivers/staging/android/logger.c
+      ```
+  7. Android Alarm 提供了一个定时器，用于把设备从睡眠状态唤醒，同时它还提供了一个即使在设备睡眠时也会运行的时钟基准。
+      其源码位于：
+      ```
+      drivers/rtc/alarm.c
+      drivers/rtc/alarm-dev.c
+      ```
+  8. USB Gadget 驱动是一个基于标准 Linux USB gadget 驱动框架的设备驱动，Android 的 USB 驱动是基于 gadget 框架的。
+      起源码位于：
+      ```
+      drivers/usb/gadget/adnroid.c
+      drivers/usb/gadget/f_adb.c
+      drivers/usb/gadget/f_mass_storage.c
+      ```
+  9. Android RAM Console. 为了提供调试功能，Android 允许将调试日志信息写入一个被称为 RAM Console 的设备中，它是一个基于 RAM 的 Buffer.
+      起源码位于：
+      ```
+      drivers/staging/android/ram_console.c
+      ```
+  10. Android timed device 提供了对设备进行定时控制的功能，目前仅支持振动器和 LED 设备。
+      起源码位于：
+      ```
+      drivers/staging/android/time_output.c(timed_gpio.c)
+      ```
+  11. Android 系统中，采用 Yaffs2 作为 MTD nand flash 文件系统。Yaffs2 是一个快速稳定的应用于 NAND 和 NOR Flash 的跨平台嵌入式设备文件系统。同其他 Flash 文件系统相比，Yaffs2 使用更小的内存来保存运动状态，因为它占用内存小；Yaffs2 的垃圾回收非常简单且快速，因此能达到更好的性能；Yaffs2 在大容量的 NAND Flash 上性能表现尤为明显，非常适合大容量的 Flash 存储。
+      起源码位于：
+      ```
+      fs/yaffs2
+      ```
+    
+'''
+tags: []
+isStarred: false
+isTrashed: false

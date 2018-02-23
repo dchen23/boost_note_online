@@ -33,6 +33,8 @@ content: '''
   
   quiz 05
   - [ ] OSPP ch2 2.1 - 2.7
+  
+  
   - [ ] xv6 book ch0
   
   ## Introduction
@@ -40,10 +42,50 @@ content: '''
   
   quiz 06 - Tue Oct 31
   - [ ] xv6 ch 1,4,5
+  
+  quiz 07 - 
+  - [ ] xv6 ch 3, 6, then 4
+  
+  ### OS
+  - scheduling
+  - virtual memory
+  - filesystems
+  
+  ### Today
+  - containers
+  - virtual console
+  
+  ---
+  Nov 28th
+  
+  ### reading
+  - [ ] xv6 ch2 (vm) - read OSPP 8 first
+  - [ ] xv6 ch6 (fs)
+  - [ ] OSPP 7, 8, 11, 13
+  
+  --- 
+  Nov 30th
+  
+  ### Page Tables
+  
+  - OSPP
+    - address translation
+      - segmentation
+      - page tables
+    - virtual memory
+  
+  - OS Isolation
+    - address translation(pagetables, segmentation,...)
+    - time interrupts
+    - user/kernel
+  
+  - COW (copy on write)
+  - mmap()
+  
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-14T22:22:20.853Z"
-updatedAt: "2017-10-30T07:42:57.582Z"
+updatedAt: "2017-12-01T00:23:15.548Z"
 isPinned: true

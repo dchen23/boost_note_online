@@ -1,0 +1,38 @@
+createdAt: "2018-02-11T05:48:35.573Z"
+updatedAt: "2018-02-11T06:03:15.285Z"
+type: "MARKDOWN_NOTE"
+folder: "02e549ed193e292be35f"
+title: "Android 烧录镜像"
+content: '''
+  ## Android 烧录镜像
+  
+  进入 bootloader 模式：
+  
+      $ adb reboot bootloader
+      
+  解锁设备：
+  
+      $ fastboot flashing unlock
+      
+      
+  ## 解压缩镜像文件
+  
+  编译生成的 system.img, ramdisk.img, userdata.img 镜像文件是采用 cpio 打包、gzip压缩的。
+  
+  首先，将 ramdisk.img 更名：
+  
+      $ mv ramdisk.img ramdisk.img.gz
+      
+  解压缩文件：
+  
+      $ gunzip ramdisk.img.gz
+      $ mkdir ramdisk && cd ramdisk
+      $ cpio -i -F ../ramdisk.img
+      
+  现在可以浏览 ramdisk 的内容了。
+  
+  用同样的方法将编译生成的 system.img, userdata.img 解压并放到 `ramdisk/system`, `ramdisk/userdata` 下，就得到一个完整的文件系统了
+'''
+tags: []
+isStarred: false
+isTrashed: false
