@@ -1,10 +1,10 @@
 createdAt: "2018-02-15T07:03:16.214Z"
-updatedAt: "2018-02-16T23:49:49.451Z"
+updatedAt: "2018-03-08T01:44:33.662Z"
 type: "MARKDOWN_NOTE"
 folder: "9cecadbb6177e0805c62"
-title: "Simple Linear Regression"
+title: "2. Simple Linear Regression"
 content: '''
-  # Simple Linear Regression
+  # 2. Simple Linear Regression
   
   ## Why Simple? Why Linear? Why Regression?
   
@@ -35,7 +35,7 @@ content: '''
       $$Y_i = \\beta_0 + \\beta_1 X_i + \\varepsilon_i $$
       
   - $\\varepsilon$ is a random error term with:
-    - $E[\\varepsilon | X_i ] = 0 $ (exogeneity)
+    - $E[\\varepsilon | X_i ] = 0$ (exogeneity)
     - $V[\\varepsilon | X_i] = \\sigma^2\\quad \\forall\\quad i$ (constant variance or homoscedasticity)
     - $\\sigma[\\varepsilon_i,  \\varepsilon_j| X_i] = 0 \\quad \\forall \\quad i,j;i \\neq j$ (no serial correlation)
     - $\\sigma[X_i, \\varepsilon_i] = 0 \\quad \\forall \\quad i$ (endogeneity)

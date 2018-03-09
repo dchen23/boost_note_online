@@ -1,10 +1,10 @@
 createdAt: "2018-02-15T06:46:00.470Z"
-updatedAt: "2018-02-15T07:02:48.193Z"
+updatedAt: "2018-03-07T23:33:43.600Z"
 type: "MARKDOWN_NOTE"
 folder: "9cecadbb6177e0805c62"
-title: "Introduction to Statistic Learning"
+title: "1. Introduction to Statistic Learning"
 content: '''
-  # Introduction to Statistic Learning
+  # 1. Introduction to Statistic Learning
   
   ## Prediction vs Inference
   
@@ -23,16 +23,25 @@ content: '''
     - maybe poor representation
   - Non-Parametric
     - require a very large number of observations
+    
+    
+  |    Parametric   | Non-parametric | Application |
+  | ---------- | --- | -------|
+  | polynomial regression |  Gaussian process | function approx.
+  | logistic regression | Gasussian process classifers | classification
+  | mixture models, k-means | Dirichlet process mixtures | clustering
+  | hidden Markov models | infinite HMMs | time series
+  | factor analysis / pPCA / PMF | infinite latent factor models | feature discovery
   
   ## Interpretability vs Flexibility
   
   ## Supervised vs Unsupervised Learning
   
   - Supervised
-    - Data where each observation of the predictor variables is associated with a response variable
+    - Data where each observation of the predictor variables $X_{i1},... , X_{i,p-1}$ is associated with a response variable $Y_i$
     - e.g., linear regression, logistic regression, GAMs, boosting, SVM, etc.
   - Unsupervised
-    - Data where each observation of the predictor variables is **not** associated with a response variable
+    - Data where each observation of the predictor variables $X_{i1},... , X_{i,p-1}$ is **not** associated with a response variable $Y_i$
     - e.g., cluster analysis
 '''
 tags: []

@@ -94,6 +94,16 @@
       "key": "06d7e86e5560676f3524",
       "color": "#FF8E00",
       "name": "概率论与数理统计"
+    },
+    {
+      "key": "507a6a7b8a945de2c6da",
+      "color": "#B013A4",
+      "name": "已掌握菜谱"
+    },
+    {
+      "key": "0e2c94a457e2a0c98adf",
+      "color": "#B013A4",
+      "name": "过河"
     }
   ],
   "version": "1.0"

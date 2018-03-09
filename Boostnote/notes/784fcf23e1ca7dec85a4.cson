@@ -1,0 +1,24 @@
+createdAt: "2018-02-28T23:34:30.368Z"
+updatedAt: "2018-03-01T01:25:15.441Z"
+type: "MARKDOWN_NOTE"
+folder: "2affe4655e0308a78bb4"
+title: "2018 Rokid Intern"
+content: '''
+  # 2018 Rokid Intern
+  
+  2018.02.19
+  
+  - [x] phabricator 文档完善
+  - [x] 学习 docker
+  
+  2018.02.28
+  
+  - [ ] git workflow + phabricator workflow 完善
+  - [ ] Phabricator generic feature
+  - [ ] Pepple 源码理解
+  - [ ] docker 配置维护
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
