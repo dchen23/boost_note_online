@@ -1,0 +1,53 @@
+createdAt: "2018-03-19T23:07:49.143Z"
+updatedAt: "2018-03-20T05:05:05.518Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "= 常见错误"
+content: '''
+  = 常见错误
+  
+  (IMPORTANT) This request asked for "/" on host "example.com", but no site is configured which can serve this request.
+  
+  Enter container's bash:
+  
+      $ sudo docker exec -it <container> bash
+      
+  Set `phabricator.base-uri` to your site, e.g.,
+  
+      $ cd /opt/phabricator/
+      $ ./bin/config set phabricator.base-uri 'http://172.26.26.26:8081'
+      
+  (IMPORTANT) 最后一个 `/` 一定要加上
+  
+  ---
+       
+  (IMPORTANT) httpd (pid ####) already running 
+  
+  You need find the layer of docker storage, to enter the docker directory, you need:
+      
+      $ sudo su
+      
+  Usually at `/var/lib/docker/aufs/diff` (CentOS), `/var/lib/docker/overlay2` (Ubuntu). 
+  
+  then delete `/run/apach2/apach2.pid` file. 
+  
+   ---
+   
+  (IMPORTANT) Error response from daemon: No command specified
+   
+   Usually happens because of `docker import` which will lose metadata. So you need to type the CMD manually.
+   
+   ---
+   
+  (IMPORTANT) ssh: connect to host 172.26.26.26 port 2222: Connection refused
+  fatal: Could not read from remote repository
+   
+   
+   The sshd service down, you need to restart:
+   
+       $ sudo docker exec -it <container> bash
+       $ /usr/sbin/sshd -f /etc/ssh/sshd_config.phabricator
+'''
+tags: []
+isStarred: false
+isTrashed: false

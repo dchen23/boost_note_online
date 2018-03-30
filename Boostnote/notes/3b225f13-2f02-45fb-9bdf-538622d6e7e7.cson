@@ -1,0 +1,80 @@
+createdAt: "2018-03-19T22:16:22.851Z"
+updatedAt: "2018-03-20T03:01:27.609Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "= Phabricator 迁移与备份"
+content: '''
+  = Phabricator 迁移与备份
+  
+  == 导出运行的站点
+  
+  === 1. 导出正在运行的容器
+  
+  分别导出 Phabricator 和 mysql 容器：
+  
+      $ [sudo] docker export <phabricator_contianer> ph.tar
+      $ [sudo] docker export <mysql_container> mysql.tar
+      
+  === 2. 导出 mysql 容器的 volume 数据
+  
+  从 busybox 镜像（可以使任意镜像）新建一个临时容器，将正在运行的 mysql 容器的 volume 导入，并将数据导出为 tar 压缩文件。完成操作后，删除临时容器：
+  
+      $ [sudo] docker run --rm --volumes-from <mysql_container> -v $(pwd):/backup busybox tar cvf /backup/backup.tar /var/lib/mysql
+      
+  - `--rm`: remove the container when it exits
+  - `--volumes-from <mysql_container>`: attach to the volumes shared by the <mysql_container>
+  - `-v $(pwd)`: /backup: bind mount the current directory into the container; to write the tar file to
+  - `busybox`: a small simpler image - good for quick maintenance
+  - `tar cvf /backup/backup.tar /var/lib/mysql`: creates an uncompressed tar file of all the files in the /data directory
+  
+  === 3. 将压缩文件传到备份的地址
+  
+  e.g.,
+  
+      $ scp mysql.tar dingyi@172.26.26.26:/home/dingyi
+      $ scp ph.tar dingyi@172.26.26.26:/home/dingyi
+      $ scp backup.tar dingyi@172.26.26.26:/home/dingyi
+      
+  == 导入备份文件并恢复站点
+  
+  确认当前工作目录下有三个 tar 压缩文件, e.g., `ph.tar`, `mysql.tar`, `backup.tar`.
+  
+  === 1. 导入备份容器的镜像
+  
+  从 tar 文件中得到备份容器的镜像：
+  
+      $ cat mysql.tar | [sudo] docker import - ph-mysql
+      $ cat ph.tar | [sudo]  docker import - ph
+  
+  === 2. 创建 volume 并将 mysql 的数据导入
+  
+  创建临时容器 TMP, 同时创建 volume. 将备份的数据解压并存入刚刚创建的 volume：
+  
+      $ [sudo] docker create -v /var/lib/mysql --name TMP busybox
+      $ [sudo] docker run --rm --volumes-from TMP -v $(pwd):/backup busybox tar xvf /backup/backup.tar
+      $ [sudo] docker rm -f TMP
+  
+  通过如下命令找到刚刚创建的 volume：
+  
+      $ [sudo] docker volume ls 
+      
+  或者
+  
+      $ [sudo] docker inspect <hash/container_name>
+      
+  === 3. 恢复站点
+  
+  从 volume 建立 mysql 容器：
+  
+      $ sudo docker run --name databasePh -v <volume_name>:/var/lib/mysql ph-mysql /bin/sh -c mysqld_safe
+  
+  恢复站点：
+  
+      $ sudo docker run -p 8081:80 -p 2222:2222 --link databasePh:database --name phwithssh ph /entrypoint.sh start-server
+      
+  
+  (NOTE) 原始镜像：[yesnault/docker-phabricator](https://github.com/yesnault/docker-phabricator)
+'''
+tags: []
+isStarred: false
+isTrashed: false

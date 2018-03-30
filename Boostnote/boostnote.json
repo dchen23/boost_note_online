@@ -104,6 +104,16 @@
       "key": "0e2c94a457e2a0c98adf",
       "color": "#B013A4",
       "name": "过河"
+    },
+    {
+      "key": "d3951723af8b36b367cb",
+      "color": "#E8D252",
+      "name": "VCS"
+    },
+    {
+      "key": "bca3afe450c502d5c08b",
+      "color": "#E8D252",
+      "name": "Android System"
     }
   ],
   "version": "1.0"

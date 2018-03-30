@@ -1,0 +1,9 @@
+createdAt: "2018-03-13T01:38:52.749Z"
+updatedAt: "2018-03-13T02:09:53.185Z"
+type: "MARKDOWN_NOTE"
+folder: "5c96f0840146633d247b"
+title: "Docker 入门到实践 笔记 --- （2）使用 Dockerfile 定制镜像"
+content: "# Docker 入门到实践 笔记 --- （2）使用 Dockerfile 定制镜像"
+tags: []
+isStarred: false
+isTrashed: false

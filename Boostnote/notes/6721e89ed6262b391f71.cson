@@ -1,13 +1,15 @@
 type: "MARKDOWN_NOTE"
 folder: "82fd2f6ef76894961133"
-title: "查看端口占用"
+title: "Linux 常用命令"
 content: '''
-  # 查看端口占用
+  # Linux 常用命令
   
-  `netstat -apn`
+  - `netstat -apn` 查看端口占用
+  
+  - `sudo su` 在 ubuntu 下获得 root 权限
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-09-18T05:30:26.073Z"
-updatedAt: "2017-09-18T05:32:43.774Z"
+updatedAt: "2018-03-17T00:18:30.566Z"

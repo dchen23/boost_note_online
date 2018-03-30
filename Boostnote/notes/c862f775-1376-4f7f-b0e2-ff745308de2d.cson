@@ -1,0 +1,26 @@
+createdAt: "2018-03-20T04:30:57.236Z"
+updatedAt: "2018-03-20T05:01:40.683Z"
+type: "MARKDOWN_NOTE"
+folder: "3246ddbd6f8814128f2f"
+title: "配置镜像仓库"
+content: '''
+  # 配置镜像仓库
+  
+  (IMPORTANT) 现在 http://172.26.20.51:8081 只作代码仓库备份使用，常规的使用和代码提交请在 http://172.26.26.26:8081 上操作！！
+  
+  原则上，常用的操作，如 wiki 的编辑，项目管理，code review 都在 http://172.26.26.26:8081 上进行操作。但是可以用原先的 Phabricator 站点作为代码镜像仓库使用。具体的配置流程如下：
+  
+  1. 新的代码仓库创建时，需要在**原站点** (http://172.26.20.51:8081) 和 **镜像站点** (http://172.26.20.51:8081) 分别创建**同名且同标识 ID** 的项目。
+  2. 在主页侧边栏，{nav Application > Passphrase > Create Credential > SSH Private Key (Generated) > Continue},  点击进入 Key-pair 生成界面，填写相应栏目，注意在 {nav Login/Username} 栏填写自己的用户名。
+  3. 保存后，可以在 Passphrase 界面看到自己生成的证书，`K# xxx`, 点击进入刚刚生成的证书，再点击 {nav Show Public Key} 按钮，将公钥复制。
+  4. 到备份站点， {nav Settings > SSH Public Keys > Upload Public Key}, 将刚刚复制的公钥黏贴进去。
+  5. 在原站点，进入需要镜像的代码仓库，点击{nav Edit Repository > Add Mirror} 进镜像站点的 HTTP/SSH  URI 黏贴到 {nav Remote URI} 栏，并在 {nav Credentials} 下拉栏中选择之前生成的证书，例如： `K2 mirror`.
+  6. 每次 `git push` 或者 `arc land` 到原站点后，改变的部分会自动推送至镜像站点。
+  
+  > 其中 步骤2 至 步骤4 一个账户只用操作一次即可，之后再配置代码仓库的镜像时，可以直接选择证书。
+  
+  Good luck, have fun~~, add gg~~.
+'''
+tags: []
+isStarred: false
+isTrashed: false

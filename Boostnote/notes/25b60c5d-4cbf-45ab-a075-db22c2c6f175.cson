@@ -1,0 +1,33 @@
+createdAt: "2018-03-14T07:37:05.429Z"
+updatedAt: "2018-03-14T18:20:44.060Z"
+type: "MARKDOWN_NOTE"
+folder: "d3951723af8b36b367cb"
+title: "GitHub Secrets"
+content: '''
+  # GitHub Secrets
+  
+  ## `.DIFF` & `.PATCH`
+  
+  add `.diff` or `.patch` to commits urls:
+  
+  - compare views
+  - pull requests
+  - commit pages
+  
+  ## Ignore Whitespace
+  
+  - add `?w=1` to any diff urls.
+  
+  ## Cross-Repository Issue Reference
+   
+   - by mentioning **user/repository#number** in a issue.
+   
+  ## `w` & `t` & `s`
+   
+   - On your repository’s home page, type `w` to quickly bring up a quick filter panel for your branches. 
+   - Inside of your repository, type `t` to jump into a quick file selector. 
+   - Type `s` to jump into a quick search bar. 
+'''
+tags: []
+isStarred: false
+isTrashed: false

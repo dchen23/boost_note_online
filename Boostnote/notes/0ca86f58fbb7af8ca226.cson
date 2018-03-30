@@ -1,5 +1,5 @@
 createdAt: "2018-02-11T06:05:29.499Z"
-updatedAt: "2018-02-12T22:54:34.308Z"
+updatedAt: "2018-03-20T04:31:17.369Z"
 type: "MARKDOWN_NOTE"
 folder: "3246ddbd6f8814128f2f"
 title: "Rokid 专用操作"
@@ -32,7 +32,7 @@ content: '''
   然后，删除原先的远程分支，在 Phabricator 上找到项目的 Clone(SSH) 或者 Clone(HTTP)  链接：
   
       $ git remote rm origin
-      $ git remote add origin 'git@yourprojectlink.git'
+      $ git remote add origin 'ssh://git@yourprojectlink.git'
   
   这时候你没有 master 分支，所以首先要创建一个：
       
@@ -44,6 +44,64 @@ content: '''
       $ ssh-keygen -t rsa
       
   然后一路回车，生成成功。
+  
+  == Review 代码
+  
+  安装好 `arc` 工具之后，执行以下的命令，配置代码仓库的证书：
+  
+      $ arc set-config default http://172.26.26.26:8081/
+      $ arc install-certificate
+  
+  第一次执行 `arc install-certificate` 会提示你打开一个链接，然后将链接中的 `token` 复制到本地。
+  
+  然后配置 `editor`, 该编辑器使用来编辑 review 的提交报告的：
+  
+      $ arc set-config editor vim
+  
+  键入下面命令来激活 review:
+  
+      $ arc diff <branch>
+  
+  完成了 review 的流程后，提交至代码仓库：
+  
+      $ arc land
+  
+  == Rokid flow
+  
+  在实际的开发中，我们要保证 `master` 是随时可以部署的。所以每当需要添加功能的时候，建议创建一个分支， 例如 `add-feature`, 然后将新建的分支上传到代码仓库：
+  
+      $ git checkout -b add-feature
+      $ git push
+  
+  开发完成后，提交本地分支 `add-feature` 上提交代码，并用过 `arc diff` 激活 review 流程：
+  
+      $ arc diff
+  
+  完成 review 之后，通过 `arc land` 命令将代码 merge 到 `master` 分支并上传至远端代码仓库：
+  
+      $ arc land --onto master --merge add-feature
+  
+  如果 `add-feature` 分支上有多个 revision 版本，则需要选择 merge 的 revision ID, 一般选择最新的, 例如：
+  
+      $ arc land --onto master --merge add-feature --revision D16
+  
+  (NOTE) 运行上面的命令会将本地的 `add-feature` 与 本地的 `msater` 进行 merge, 然后上传到远端的 `master` 分支。并且在执行自动删除本地的 `add-feature` 分支（如果你想保留本地的 `add-feature` 分支，可以手动恢复），但是远端的 `add-feature` 分支仍然存在。
+  
+  如果不想保留远端的 `add-feature` 分支，可以通过 git 命令手动删除：
+  
+      $ git push origin :add-feature
+  
+  或者
+  
+      $ git push origin --delete add-feature
+  
+  (NOTE) 如果你的代码仓库是默认设置的话，以上两个命令可能会执行失败，可以让代码仓库创建人或者管理员去修改设置：
+  
+  {nav Diffusion > rXXX (master) > Edit Repository > Hosting > Allow Dangerous Changes}
+  
+  点击 `Allow Dangerous Changes` 按钮并同意弹出框。
+  
+  Good Luky, have fun ~~,and gg~~.
 '''
 tags: []
 isStarred: false
